@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 export default function Home() {
 
   const toPage = useRouter()
-  const [isCheer1, setIsCheer1] = useState<boolean>(false)
 
 
   const [_hidden, set_hidden] = useState<boolean>(false)
@@ -18,26 +17,7 @@ export default function Home() {
     }, 3000);
   }, [])
 
-  const [scrollY, setScrollY] = useState<number>(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup để tránh leak memory khi component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (scrollY > 100) {
-      setIsCheer1(true)
-    }
-  }, [scrollY])
 
   const beers = [
     {
