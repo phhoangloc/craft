@@ -1,101 +1,472 @@
+'use client'
+import Loading from "@/components/loading";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const toPage = useRouter()
+  const [isCheer1, setIsCheer1] = useState<boolean>(false)
+
+
+  const [_hidden, set_hidden] = useState<boolean>(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      set_hidden(true)
+    }, 3000);
+  }, [])
+
+  const [scrollY, setScrollY] = useState<number>(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup để tránh leak memory khi component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (scrollY > 100) {
+      setIsCheer1(true)
+    }
+  }, [scrollY])
+
+  const beers = [
+    {
+      img: "/logo/beer_01.webp",
+      name: "HOPDOG BREWING"
+    },
+    {
+      img: "/logo/beer_02.png",
+      name: "TEGAMISHA BREWERY"
+    },
+    {
+      img: "/logo/beer_03.png",
+      name: "Nobara Homestead Brewery"
+    },
+    {
+      img: "/logo/beer_04.png",
+      name: "West Coast Brewing"
+    },
+    {
+      img: "/logo/beer_05.png",
+      name: "Repubrew"
+    },
+    {
+      img: "/logo/beer_06.png",
+      name: "ワイマーケット・ブルーイング"
+    },
+    {
+      img: "/logo/beer_07.png",
+      name: "アルデアやましろビールズ"
+    },
+    {
+      img: "/logo/beer_08.png",
+      name: "ウッドミルブルワリー・京都"
+    },
+    {
+      img: "/logo/beer_09.jpg",
+      name: "Kyoto Brewing"
+    },
+    {
+      img: "/logo/beer_10.jpeg",
+      name: "KYOTO NUDE BREWERY"
+    },
+    {
+      img: "/logo/beer_11.png",
+      name: "家守堂"
+    },
+    {
+      img: "/logo/beer_12.png",
+      name: "銭湯醸造 上方ビール"
+    },
+    {
+      img: "/logo/beer_13.png",
+      name: "Derailleur Brew Works"
+    },
+    {
+      img: "/logo/beer_14.png",
+      name: "箕面ビール"
+    },
+    {
+      img: "/logo/beer_15.jpg",
+      name: "イーグレブルワリー"
+    },
+    {
+      img: "/logo/beer_16.png",
+      name: "NOMCRAFT BREWING"
+    },
+    {
+      img: "/logo/beer_17.png",
+      name: "CHORYO Craft Beer"
+    },
+    {
+      img: "/logo/beer_18.png",
+      name: "奈良醸造",
+      opacity: "30"
+    },
+    {
+      img: "/logo/beer_19.png",
+      name: "RISE＆WIN Brewing Co./KAMIKATZ BEER",
+      opacity: "30"
+    },
+    {
+      img: "/logo/beer_20.webp",
+      name: "DD4D BREWING"
+    },
+    {
+      img: "/logo/beer_21.png",
+      name: "しまなみブルワリー"
+    },
+    {
+      img: "/logo/beer_22.webp",
+      name: "別府ブルワリー"
+    },
+  ]
+  const foods = [
+    {
+      img: "/logo/food_01.png",
+      name: "はるまき家"
+    },
+    {
+      img: "/logo/food_02.png",
+      name: "INDIA GATE"
+    },
+    {
+      img: "/logo/food_03.jpg",
+      name: "火曜腸詰倶楽部"
+    },
+    {
+      img: "/logo/food_04.jpg",
+      name: "スタンドうみねこコト"
+    },
+    {
+      img: "/logo/food_05.png",
+      name: "DE FRITES STAAN"
+    },
+    {
+      img: "/logo/food_06.jpg",
+      name: "ボクとおじいちゃん"
+    },
+    {
+      img: "/logo/food_07.png",
+      name: "麺処 虵の目屋"
+    },
+    {
+      img: "/logo/food_08.avif",
+      name: "モグラと夕陽"
+    },
+    {
+      img: "/logo/food_09.png",
+      name: "NITO Coffee&Craft Beer"
+    },
+    {
+      img: "/logo/food_10.jpg",
+      name: "旬菜中華バル ミツカン"
+    },
+  ]
+  const kitchens = [
+    {
+      img: "/logo/ga_01.png",
+      name: "Gori’s Kitchen"
+    },
+    {
+      img: "/logo/ga_02.png",
+      name: "RUDE BURGER CLUB"
+    },
+    {
+      img: "/logo/ga_03.jpg",
+      name: "森のひとやすみ"
+    },
+  ]
+  const stores = [
+    {
+      img: "/logo/beer_12.png",
+      name: "銭湯醸造 上方ビール"
+    },
+    {
+      img: "/logo/store_02.png",
+      name: "Free Spirits Brewing"
+    },
+    {
+      img: "/logo/beer_11.png",
+      name: "家守堂"
+    },
+    {
+      img: "/logo/beer_14.png",
+      name: "箕面ビール"
+    },
+  ]
+  const stores_2 = [
+    {
+      img: "/logo/store_2_01.png",
+      name: "一乗寺ブリュワリー"
+    },
+    {
+      img: "/logo/store_2_02.png",
+      name: "Bighand Bros. Beer"
+    },
+    {
+      img: "/logo/store_2_03.png",
+      name: "AQベボリューション"
+    },
+    {
+      img: "/logo/store_2_04.png",
+      name: "OUR BREWING"
+    },
+  ]
+  const stores_3 = [
+    {
+      img: "/logo/store_3_01.png",
+      name: "長濱浪漫ビールHOP三条木屋町"
+    },
+    {
+      img: "/logo/store_3_02.png",
+      name: "日々一泡ブルワリー"
+    },
+    {
+      img: "/logo/beer_17.png",
+      name: "CHORYO Craft Beer"
+    },
+    {
+      img: "/logo/store_3_04.png",
+      name: "大和醸造"
+    },
+  ]
+  const stores_4 = [
+    {
+      img: "/logo/beer_01.webp",
+      name: "HOPDOG BREWING"
+    },
+    {
+      img: "/logo/beer_05.png",
+      name: "Repubrew"
+    },
+    {
+      img: "/logo/store_4_03.png",
+      name: "しまなみブルワリー"
+    },
+    {
+      img: "/logo/beer_02.png",
+      name: "TEGAMISHA BREWERY"
+    },
+  ]
+  const menus = [
+    {
+      name: "TOP",
+      link: "/"
+
+    },
+    {
+      name: "ABOUT",
+      link: "#about"
+    },
+    {
+      name: "BREWERY",
+      link: "#beer"
+    },
+    {
+      name: "FOOD",
+      link: "#food"
+    },
+    {
+      name: "EVENT",
+      link: "#event"
+    },
+  ]
+  return (
+    <>
+      <div className="relative bg-cl-1">
+        <Loading hidden={_hidden} />
+
+        <div className="sticky -top-[500px] w-full h-max md:flex">
+          <div className="hidden lg:block p-4 lg:w-1/6">
+            <Image src={"/img/menu_logo.png"} width={500} height={500} className="h-auto w-full  max-w-[250px] m-auto" alt="foam" />
+            {menus.map((beer, index) =>
+              <div className="text-white text-2xl pl-8 mt-3 cursor-pointer " style={{ fontFamily: 'Dela Gothic One' }} onClick={() => toPage.push("/" + beer.link)} key={index}>{beer.name}</div>
+            )}
+          </div>
+          <div className="absolute left-0  top-[675px] w-full z-[2] max-w-[375px]">
+            <Image src={"/img/infor_left.png"} width={500} height={500} className="h-full !w-auto m-auto" alt="foam" />
+          </div>
+          <div className="h-max w-full lg:w-4/6 relative  bg-cl-1 z" >
+            <div className={`w-full transition-all duration-1000 overflow-hidden h-[900px] flex flex-col justify-center m-auto translate-y-[-15%] sm:translate-y-[0%]`}>
+              <Image src={"/img/mainlogo.png"} width={500} height={500} className={`w-3/4 max-w-[450px] h-auto m-auto my-12 z-[1] relative ${_hidden ? "scale_animation" : ""}`} alt="cover1" />
+            </div>
+            <div className="absolute top-0 w-full h-[450px] z-[1]">
+              <Image src={"/img/Illust_web_top.png"} width={500} height={500} className="w-full max-w-[900px] m-auto" alt="foam" />
+            </div>
+            <div className="absolute bottom-0 w-full h-[450px] z-[1]">
+              <Image src={"/img/Illust_web_bottom.png"} width={500} height={500} className="w-full max-w-[900px] m-auto" alt="foam" />
+            </div>
+          </div>
+          <div className="hidden lg:block p-4 lg:w-1/6">
+          </div>
+          <div className="absolute right-0 top-[900px] lg:top-[550px] w-full z-[1] max-w-[375px]">
+            <Image src={"/img/infor_right.png"} width={500} height={500} className="h-full !w-auto ml-auto mr-0" alt="foam" />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="h-96 max-w-[768px] w-full m-auto flex flex-col justify-center sticky top-0">
+
+        </div>
+
+        <div className=" overflow-x-hidden relative z-[1]">
+          <div className={`h-max w-[200vw] flex loading_row`}>
+            <Image src={"/img/foam_v2.png"} width={500} height={500} className="w-full h-1/2 " alt="foam" />
+            <Image src={"/img/foam_v2.png"} width={500} height={500} className="w-full h-1/2 " alt="foam" />
+            <Image src={"/img/foam_v2.png"} width={500} height={500} className="w-full h-1/2 " alt="foam" />
+            <Image src={"/img/foam_v2.png"} width={500} height={500} className="w-full h-1/2 " alt="foam" />
+          </div>
+        </div>
+        <div className="bg-cl-0 p-4 text-center sticky top-0 z-10 text-white ">
+          <div className="flex flex-col justify-center h-96 w-full max-w-[768px] m-auto">
+
+            <div className="text-center text-2xl font-bold m-4 text-white">京都湯上がりクラフトビール祭 2025 開催決定！</div>
+            <p className=" text-white">
+              【クラフトビール×銭湯×紙芝居？！】第3回 「京都湯上がりクラフトビール祭 2025」開催決定！<br></br>
+              2025年5月3日（土・祝）、4日（日・祝）に京都市・伏見の力の湯に隣接する「フットサルコート内」で行います。
+            </p>
+          </div>
+          <div id="beer" className="h-12 max-w-[768px] m-1/2 bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0 m-auto">
+            ブルワリー
+          </div>
+          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+            {beers.map((beer, index) =>
+              <div key={index} className="w-full ">
+                <div className={`aspect-square w-full relative rounded-lg overflow-hidden`} style={{ backgroundColor: beer.opacity ? "rgba(255,255,255,0.2)" : "white" }}>
+                  <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+                </div>
+                <div className="h-6"></div>
+                <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+              </div>
+            )}
+          </div>
+          <div className="h-12"></div>
+          <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+            フード
+          </div>
+          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+            {foods.map((beer, index) =>
+              <div key={index} className="w-full">
+                <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                  <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+                </div>
+                <div className="h-6"></div>
+                <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+              </div>
+            )}
+          </div>
+          <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+            キッチンカー
+          </div>
+          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+            {kitchens.map((beer, index) =>
+              <div key={index} className="w-full">
+                <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                  <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+                </div>
+                <div className="h-6"></div>
+                <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+              </div>
+            )}
+          </div>
+          <div className=" flex flex-col justify-center text-center max-w-[768px] m-auto py-32">
+            <div className="w-full max-w-[768px] m-auto">
+              <Image src={"/img/campain.png"} width={500} height={500} className="w-full h-auto" alt="campain" />
+            </div>
+            <div>
+              イベント当日、京都駅改札内に掲示されているポスターから二次元コードにアクセスして、イベント会場にて1会計をしていただくと、カプセルガチャを1回まわして、景品が当たります！ はずれなし！
+              【景品引換場所】 京都駅構内 コトチカ広場
+            </div>
+          </div>
+        </div>
+      </div >
+
+      <div className=" w-full bg-cl-2 relative z-[3]" id="event">
+        <div className="h-12"></div>
+        <div className="w-full max-w-[768px] m-auto flex flex-col justify-center">
+          <Image src={"/img/main_event.png"} width={500} height={500} className="w-full h-auto" alt="event-logo" />
+        </div>
+        <div className="w-full max-w-[768px] m-auto flex flex-col justify-center">
+          <Image src={"/img/main_event_2.png"} width={500} height={500} className="w-full h-auto" alt="event-logo" />
+        </div>
+        <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+          出店ブルワリー　4/25 Fri, 4/26 Sat
+        </div>
+        <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+          {stores.map((beer, index) =>
+            <div key={index} className="w-full">
+              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+              </div>
+              <div className="h-6"></div>
+              <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+            </div>
+          )}
+        </div>
+        <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+          4/27 Mon, 4/28 Tue
+        </div>
+        <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+          {stores_2.map((beer, index) =>
+            <div key={index} className="w-full">
+              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+              </div>
+              <div className="h-6"></div>
+              <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+            </div>
+          )}
+        </div>
+        <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+          4/29 Wed, 4/30 Thu
+        </div>
+        <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+          {stores_3.map((beer, index) =>
+            <div key={index} className="w-full">
+              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+              </div>
+              <div className="h-6"></div>
+              <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+            </div>
+          )}
+        </div>
+        <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+          5/1 Thu, 5/2 Fri
+        </div>
+        <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+          {stores_4.map((beer, index) =>
+            <div key={index} className="w-full">
+              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+              </div>
+              <div className="h-6"></div>
+              <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+            </div>
+          )}
+        </div>
+        <div className="h-24"></div>
+        <div className="bg-white h-60">
+          <div className="h-12"></div>
+          <div className="flex m-auto w-max gap-8">
+            <Image src={"/img/footer_01.png"} width={500} height={500} className="w-auto !h-12" alt="f1" />
+            <Image src={"/img/footer_02.png"} width={500} height={500} className="w-auto !h-12" alt="f2" />
+          </div>
+          <div className="flex w-max m-auto">
+            <Image src={"/img/footer_03.png"} width={500} height={500} className="w-auto h-12" alt="f2" />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

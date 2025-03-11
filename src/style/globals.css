@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cl-0: #00895e;
+  --color-cl-1: #8bba7e;
+  --color-cl-2: #ed6e46;
+}
+
+.beer1-animation {
+  animation: beer1 3s ease-in-out forwards;
+}
+
+.beer2-animation {
+  animation: beer2 3s ease-in-out forwards;
+}
+
+@keyframes beer1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  80% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes beer2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  80% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.loading_animation {
+  animation: loading 2s forwards;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+.loading_row {
+  animation: loading_row 60s infinite;
+
+}
+
+@keyframes loading_row {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scale_animation {
+  animation: scale 4s forwards;
+  border-radius: 8px;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  75% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

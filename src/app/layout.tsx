@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Noto_Sans, Dela_Gothic_One } from "next/font/google";
+import "../style/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const notoSans = Noto_Sans({
+  subsets: ['latin'],
+  display: 'swap',
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const dela = Dela_Gothic_One({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: "400"
 });
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${notoSans.className || dela.className} `}
       >
         {children}
       </body>
