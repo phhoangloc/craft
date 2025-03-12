@@ -17,22 +17,6 @@ export default function Home() {
     }, 3000);
   }, [])
 
-  const [scrollY, setScrollY] = useState<number>(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup để tránh leak memory khi component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  console.log(scrollY)
   const beers = [
     {
       img: "/logo/beer_01.webp",
@@ -288,8 +272,8 @@ export default function Home() {
               <div className="text-white text-2xl pl-8 mt-3 cursor-pointer " style={{ fontFamily: 'Dela Gothic One' }} onClick={() => toPage.push("/" + beer.link)} key={index}>{beer.name}</div>
             )}
           </div>
-          <div className="absolute left-0  top-[675px] w-full z-[2] max-w-[375px]">
-            <Image src={"/img/infor_left.png"} width={500} height={500} className="h-full !w-auto m-auto" alt="foam" />
+          <div className="absolute left-0  top-[675px] w-full z-[2] max-w-[575px]">
+            <Image src={"/img/infor_left.png"} width={500} height={500} className=" !w-9/12 ml-0" alt="foam" />
           </div>
           <div className="h-max w-full lg:w-4/6 relative  bg-cl-1 z" >
             <div className={`w-full transition-all duration-1000 overflow-hidden h-[900px] flex flex-col justify-center m-auto translate-y-[-15%] sm:translate-y-[0%]`}>
