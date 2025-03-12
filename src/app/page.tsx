@@ -17,8 +17,22 @@ export default function Home() {
     }, 3000);
   }, [])
 
+  const [scrollY, setScrollY] = useState<number>(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup để tránh leak memory khi component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  console.log(scrollY)
   const beers = [
     {
       img: "/logo/beer_01.webp",
@@ -264,10 +278,10 @@ export default function Home() {
   ]
   return (
     <>
-      <div className="relative bg-cl-1">
+      <div className="relative bg-cl-1 z-0">
         <Loading hidden={_hidden} />
 
-        <div className="sticky -top-[500px] w-full h-max md:flex">
+        <div className="sticky -top-[700px] lg:-top-[500px] w-full h-max md:flex z-0">
           <div className="hidden lg:block p-4 lg:w-1/6">
             <Image src={"/img/menu_logo.png"} width={500} height={500} className="h-auto w-full  max-w-[250px] m-auto" alt="foam" />
             {menus.map((beer, index) =>
@@ -295,8 +309,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="h-96 max-w-[768px] w-full m-auto flex flex-col justify-center sticky top-0">
-
+        <div className="h-[768px] lg:h-96 max-w-[768px] w-full m-auto flex flex-col justify-center sticky top-0 ">
         </div>
 
         <div className=" overflow-x-hidden relative z-[1]">
@@ -307,7 +320,7 @@ export default function Home() {
             <Image src={"/img/foam_v2.png"} width={500} height={500} className="w-full h-1/2 " alt="foam" />
           </div>
         </div>
-        <div className="bg-cl-0 p-4 text-center sticky top-0 z-10 text-white ">
+        <div className="bg-cl-0 p-4 text-center sticky top-0 z-[3] text-white ">
           <div className="flex flex-col justify-center h-96 w-full max-w-[768px] m-auto">
 
             <div className="text-center text-2xl font-bold m-4 text-white">京都湯上がりクラフトビール祭 2025 開催決定！</div>
@@ -359,7 +372,7 @@ export default function Home() {
               </div>
             )}
           </div>
-          <div className=" flex flex-col justify-center text-center max-w-[768px] m-auto py-32">
+          <div className=" flex flex-col justify-center text-center max-w-[768px] m-auto pt-32 pb-12">
             <div className="w-full max-w-[768px] m-auto">
               <Image src={"/img/campain.png"} width={500} height={500} className="w-full h-auto" alt="campain" />
             </div>
@@ -368,84 +381,93 @@ export default function Home() {
               【景品引換場所】 京都駅構内 コトチカ広場
             </div>
           </div>
+          <div className="h-12"></div>
         </div>
       </div >
+      <div className="bg-cl-0 relative z-[1]">
 
-      <div className=" w-full bg-cl-2 relative z-[3]" id="event">
-        <div className="h-12"></div>
-        <div className="w-full max-w-[768px] m-auto flex flex-col justify-center">
-          <Image src={"/img/main_event.png"} width={500} height={500} className="w-full h-auto" alt="event-logo" />
-        </div>
-        <div className="w-full max-w-[768px] m-auto flex flex-col justify-center">
-          <Image src={"/img/main_event_2.png"} width={500} height={500} className="w-full h-auto" alt="event-logo" />
-        </div>
-        <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
-          出店ブルワリー　4/25 Fri, 4/26 Sat
-        </div>
-        <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
-          {stores.map((beer, index) =>
-            <div key={index} className="w-full">
-              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
-                <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
-              </div>
-              <div className="h-6"></div>
-              <div className="font-bold text-lg text-white text-center">{beer.name}</div>
-            </div>
-          )}
-        </div>
-        <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
-          4/27 Mon, 4/28 Tue
-        </div>
-        <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
-          {stores_2.map((beer, index) =>
-            <div key={index} className="w-full">
-              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
-                <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
-              </div>
-              <div className="h-6"></div>
-              <div className="font-bold text-lg text-white text-center">{beer.name}</div>
-            </div>
-          )}
-        </div>
-        <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
-          4/29 Wed, 4/30 Thu
-        </div>
-        <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
-          {stores_3.map((beer, index) =>
-            <div key={index} className="w-full">
-              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
-                <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
-              </div>
-              <div className="h-6"></div>
-              <div className="font-bold text-lg text-white text-center">{beer.name}</div>
-            </div>
-          )}
-        </div>
-        <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
-          5/1 Thu, 5/2 Fri
-        </div>
-        <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
-          {stores_4.map((beer, index) =>
-            <div key={index} className="w-full">
-              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
-                <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
-              </div>
-              <div className="h-6"></div>
-              <div className="font-bold text-lg text-white text-center">{beer.name}</div>
-            </div>
-          )}
-        </div>
-        <div className="h-24"></div>
-        <div className="bg-white h-60">
+        <Image src={"/img/banner.png"} width={500} height={500} className={`h-auto w-11/12 max-w-[500px] m-auto sticky z-[5]`} alt="banner" style={{ top: "calc(100vh - 12rem)" }} />
+        <div className="h-48"></div>
+
+        <div className=" w-full bg-cl-2 relative z-[4] p-4" id="event">
           <div className="h-12"></div>
-          <div className="flex m-auto w-max gap-8">
-            <Image src={"/img/footer_01.png"} width={500} height={500} className="w-auto !h-12" alt="f1" />
-            <Image src={"/img/footer_02.png"} width={500} height={500} className="w-auto !h-12" alt="f2" />
+          <div className="w-full max-w-[768px] m-auto flex flex-col justify-center">
+            <Image src={"/img/main_event.png"} width={500} height={500} className="w-full h-auto" alt="event-logo" />
           </div>
-          <div className="flex w-max m-auto">
-            <Image src={"/img/footer_03.png"} width={500} height={500} className="w-auto h-12" alt="f2" />
+          <div className="w-full max-w-[768px] m-auto flex flex-col justify-center">
+            <Image src={"/img/main_event_2.png"} width={500} height={500} className="w-full h-auto" alt="event-logo" />
+          </div>
+          <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+            4/25 Fri, 4/26 Sat
+          </div>
+          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+            {stores.map((beer, index) =>
+              <div key={index} className="w-full">
+                <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                  <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+                </div>
+                <div className="h-6"></div>
+                <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+              </div>
+            )}
+          </div>
+          <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+            4/27 Mon, 4/28 Tue
+          </div>
+          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+            {stores_2.map((beer, index) =>
+              <div key={index} className="w-full">
+                <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                  <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+                </div>
+                <div className="h-6"></div>
+                <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+              </div>
+            )}
+          </div>
+          <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+            4/29 Wed, 4/30 Thu
+          </div>
+          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+            {stores_3.map((beer, index) =>
+              <div key={index} className="w-full">
+                <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                  <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+                </div>
+                <div className="h-6"></div>
+                <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+              </div>
+            )}
+          </div>
+          <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+            5/1 Thu, 5/2 Fri
+          </div>
+          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+            {stores_4.map((beer, index) =>
+              <div key={index} className="w-full">
+                <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                  <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+                </div>
+                <div className="h-6"></div>
+                <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+              </div>
+            )}
+          </div>
+          <div className="h-24"></div>
+
+        </div >
+        <div className="bg-white h-60 p-4 max-w-[768px] w-full m-auto">
+          <div className="h-12"></div>
+          <div className="md:flex m-auto w-full">
+            <Image src={"/img/footer_01.png"} width={500} height={500} className="w-4/5 max-w-[375px] md:w-1/2 md:max-w-none !h-auto" alt="f1" />
+            <Image src={"/img/footer_02.png"} width={500} height={500} className="w-3/6 max-w-[375px] md:w-1/2 md:max-w-none !h-auto" alt="f2" />
+          </div>
+          <div className="h-2"></div>
+          <div className="flex w-full m-auto">
+            <Image src={"/img/footer_03.png"} width={500} height={500} className="w-full h-auto" alt="f2" />
           </div>
         </div>
+        <div className="h-60 bg-white"></div>
       </div>
     </>
   );
