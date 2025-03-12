@@ -331,7 +331,7 @@ export default function Home() {
           <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
             {beers.map((beer, index) =>
               <div key={index} className="w-full ">
-                <div className={`aspect-square w-full relative rounded-lg overflow-hidden`} >
+                <div className={`aspect-square w-full relative rounded-lg overflow-hidden bg-white`} >
                   <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
                 </div>
                 <div className="h-6"></div>
