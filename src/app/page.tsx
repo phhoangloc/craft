@@ -238,6 +238,7 @@ export default function Home() {
   ]
   const stores_food = [
     {
+      img: "/logo/store_4_01.png",
       name: "hinami（ホットドッグ）"
     },
     {
