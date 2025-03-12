@@ -175,11 +175,11 @@ export default function Home() {
       name: "Free Spirits Brewing"
     },
     {
-      img: "/logo/beer_11.png",
+      img: "/logo/beer_11.jpg",
       name: "家守堂"
     },
     {
-      img: "/logo/beer_14.png",
+      img: "/logo/beer_14.jpg",
       name: "箕面ビール"
     },
   ]
