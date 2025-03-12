@@ -13,9 +13,9 @@ const dela = Dela_Gothic_One({
 });
 
 export const metadata: Metadata = {
-  title: "kyoto-afterbathcraftbeer2025",
+  title: "京都湯上がりクラフトビール祭",
   openGraph: {
-    title: 'kyoto-afterbathcraftbeer2025',
+    title: '京都湯上がりクラフトビール祭',
     url: 'https://kyoto-afterbathcraftbeer2025.vercel.app/',
     images: [
       {
