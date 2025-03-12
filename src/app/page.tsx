@@ -19,7 +19,7 @@ export default function Home() {
 
   const beers = [
     {
-      img: "/logo/beer_01.webp",
+      img: "/logo/beer_01.png",
       name: "HOPDOG BREWING"
     },
     {
@@ -27,7 +27,7 @@ export default function Home() {
       name: "TEGAMISHA BREWERY"
     },
     {
-      img: "/logo/beer_03.png",
+      img: "/logo/beer_03.jpg",
       name: "Nobara Homestead Brewery"
     },
     {
@@ -39,11 +39,11 @@ export default function Home() {
       name: "Repubrew"
     },
     {
-      img: "/logo/beer_06.png",
+      img: "/logo/beer_06.jpg",
       name: "ワイマーケット・ブルーイング"
     },
     {
-      img: "/logo/beer_07.png",
+      img: "/logo/beer_07.jpg",
       name: "アルデアやましろビールズ"
     },
     {
@@ -51,15 +51,15 @@ export default function Home() {
       name: "ウッドミルブルワリー・京都"
     },
     {
-      img: "/logo/beer_09.jpg",
+      img: "/logo/beer_09.png",
       name: "Kyoto Brewing"
     },
     {
-      img: "/logo/beer_10.jpeg",
+      img: "/logo/beer_10.jpg",
       name: "KYOTO NUDE BREWERY"
     },
     {
-      img: "/logo/beer_11.png",
+      img: "/logo/beer_11.jpg",
       name: "家守堂"
     },
     {
@@ -71,11 +71,11 @@ export default function Home() {
       name: "Derailleur Brew Works"
     },
     {
-      img: "/logo/beer_14.png",
+      img: "/logo/beer_14.jpg",
       name: "箕面ビール"
     },
     {
-      img: "/logo/beer_15.jpg",
+      img: "/logo/beer_15.png",
       name: "イーグレブルワリー"
     },
     {
@@ -105,13 +105,13 @@ export default function Home() {
       name: "しまなみブルワリー"
     },
     {
-      img: "/logo/beer_22.webp",
+      img: "/logo/beer_22.jpg",
       name: "別府ブルワリー"
     },
   ]
   const foods = [
     {
-      img: "/logo/food_01.png",
+      img: "/logo/food_01.jpg",
       name: "はるまき家"
     },
     {
@@ -123,7 +123,7 @@ export default function Home() {
       name: "火曜腸詰倶楽部"
     },
     {
-      img: "/logo/food_04.jpg",
+      img: "/logo/food_04.png",
       name: "スタンドうみねこコト"
     },
     {
@@ -135,11 +135,11 @@ export default function Home() {
       name: "ボクとおじいちゃん"
     },
     {
-      img: "/logo/food_07.png",
+      img: "/logo/food_07.jpg",
       name: "麺処 虵の目屋"
     },
     {
-      img: "/logo/food_08.avif",
+      img: "/logo/food_08.jpg",
       name: "モグラと夕陽"
     },
     {
@@ -171,7 +171,7 @@ export default function Home() {
       name: "銭湯醸造 上方ビール"
     },
     {
-      img: "/logo/store_02.png",
+      img: "/logo/store_02.jpg",
       name: "Free Spirits Brewing"
     },
     {
@@ -185,7 +185,7 @@ export default function Home() {
   ]
   const stores_2 = [
     {
-      img: "/logo/store_2_01.png",
+      img: "/logo/store_2_01.jpg",
       name: "一乗寺ブリュワリー"
     },
     {
@@ -203,11 +203,11 @@ export default function Home() {
   ]
   const stores_3 = [
     {
-      img: "/logo/store_3_01.png",
+      img: "/logo/store_3_01.jpg",
       name: "長濱浪漫ビールHOP三条木屋町"
     },
     {
-      img: "/logo/store_3_02.png",
+      img: "/logo/store_3_02.jpg",
       name: "日々一泡ブルワリー"
     },
     {
@@ -215,13 +215,13 @@ export default function Home() {
       name: "CHORYO Craft Beer"
     },
     {
-      img: "/logo/store_3_04.png",
+      img: "/logo/store_3_04.jpg",
       name: "大和醸造"
     },
   ]
   const stores_4 = [
     {
-      img: "/logo/beer_01.webp",
+      img: "/logo/beer_01.png",
       name: "HOPDOG BREWING"
     },
     {
@@ -229,12 +229,26 @@ export default function Home() {
       name: "Repubrew"
     },
     {
-      img: "/logo/store_4_03.png",
+      img: "/logo/beer_21.png",
+
       name: "しまなみブルワリー"
     },
     {
       img: "/logo/beer_02.png",
       name: "TEGAMISHA BREWERY"
+    },
+  ]
+  const stores_food = [
+    {
+      name: "hinami（ホットドッグ）"
+    },
+    {
+      img: "/logo/store_4_02.png",
+      name: "OKAWARI POPCORN"
+    },
+    {
+      img: "/logo/store_4_03.png",
+      name: "こぐま商店（おかき）"
     },
   ]
   const menus = [
@@ -431,6 +445,20 @@ export default function Home() {
               <div key={index} className="w-full">
                 <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
                   <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
+                </div>
+                <div className="h-6"></div>
+                <div className="font-bold text-lg text-white text-center">{beer.name}</div>
+              </div>
+            )}
+          </div>
+          <div id="food" className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
+            フード
+          </div>
+          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+            {stores_food.map((beer, index) =>
+              <div key={index} className="w-full">
+                <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                  {beer.img ? <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} /> : null}
                 </div>
                 <div className="h-6"></div>
                 <div className="font-bold text-lg text-white text-center">{beer.name}</div>
