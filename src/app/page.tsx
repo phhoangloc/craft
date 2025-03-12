@@ -89,12 +89,10 @@ export default function Home() {
     {
       img: "/logo/beer_18.png",
       name: "奈良醸造",
-      opacity: "30"
     },
     {
       img: "/logo/beer_19.png",
       name: "RISE＆WIN Brewing Co./KAMIKATZ BEER",
-      opacity: "30"
     },
     {
       img: "/logo/beer_20.webp",
@@ -333,7 +331,7 @@ export default function Home() {
           <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
             {beers.map((beer, index) =>
               <div key={index} className="w-full ">
-                <div className={`aspect-square w-full relative rounded-lg overflow-hidden`} style={{ backgroundColor: beer.opacity ? "rgba(255,255,255,0.2)" : "white" }}>
+                <div className={`aspect-square w-full relative rounded-lg overflow-hidden`} >
                   <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} />
                 </div>
                 <div className="h-6"></div>
