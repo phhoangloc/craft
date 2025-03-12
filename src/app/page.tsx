@@ -440,15 +440,17 @@ export default function Home() {
           <div className="h-24"></div>
 
         </div >
-        <div className="bg-white h-60 p-4 max-w-[768px] w-full m-auto">
-          <div className="h-12"></div>
-          <div className="md:flex m-auto w-full">
-            <Image src={"/img/footer_01.png"} width={500} height={500} className="w-4/5 max-w-[375px] md:w-1/2 md:max-w-none !h-auto" alt="f1" />
-            <Image src={"/img/footer_02.png"} width={500} height={500} className="w-3/6 max-w-[375px] md:w-1/2 md:max-w-none !h-auto" alt="f2" />
-          </div>
-          <div className="h-2"></div>
-          <div className="flex w-full m-auto">
-            <Image src={"/img/footer_03.png"} width={500} height={500} className="w-full h-auto" alt="f2" />
+        <div className="bg-white">
+          <div className=" h-60 p-4 max-w-[768px] w-full m-auto">
+            <div className="h-12"></div>
+            <div className="md:flex m-auto w-full">
+              <Image src={"/img/footer_01.png"} width={500} height={500} className="w-4/5 max-w-[375px] md:w-1/2 md:max-w-none !h-auto" alt="f1" />
+              <Image src={"/img/footer_02.png"} width={500} height={500} className="w-3/6 max-w-[375px] md:w-1/2 md:max-w-none !h-auto" alt="f2" />
+            </div>
+            <div className="h-2"></div>
+            <div className="flex w-full m-auto">
+              <Image src={"/img/footer_03.png"} width={500} height={500} className="w-full h-auto" alt="f2" />
+            </div>
           </div>
         </div>
         <div className="h-60 bg-white"></div>
