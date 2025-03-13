@@ -17,7 +17,20 @@ export default function Home() {
       set_hidden(true)
     }, 3000);
   }, [])
+  const [scrollY, setScrollY] = useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup để tránh leak memory khi component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   const beers = [
     {
       img: "/logo/beer_01.png",
@@ -623,7 +636,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
   return (
     <>
       <Loading hidden={_hidden} />
-      <div className="hidden lg:block lg:fixed p-4 lg:w-1/6 z-[2] top-0 h-full left-0">
+      <div className={`hidden lg:block lg:fixed p-4 lg:w-1/6 z-[2] top-0 h-full left-0 transition-all duration-300 ease-in-out ${scrollY > 200 && scrollY < 1200 ? " opacity-0" : " opacity-100"}`}>
         <Image src={"/img/menu_logo.png"} width={500} height={500} className="h-auto w-full  max-w-[250px] m-auto" alt="foam" />
         {menus.map((beer, index) =>
           <div className="text-white text-2xl pl-8 mt-3 cursor-pointer " style={{ fontFamily: 'Dela Gothic One' }} onClick={() => toPage.push("/" + beer.link)} key={index}>{beer.name}</div>
@@ -820,7 +833,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             )}
           </div>
           <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
-            FODD
+            FOOD
           </div>
           <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
             {stores_food.map((beer, index) =>
