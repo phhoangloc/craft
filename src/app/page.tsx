@@ -125,10 +125,9 @@ export default function Home() {
       name: "KYOTO NUDE BREWERY",
       add: "京都 / 京北",
       content: `
-      私たちは京都市内でクラフトビールの飲食店を3店舗運営しております。 <br>
-      そこから自家醸造をしたい、世界に向けて挑戦したい、という思いより、京都にてBREWERYをつくることを決意。<br>
-      2023年9月より醸造開始。 京都市内ではありながらも豊かな森に囲まれた【森の京都】と呼ばれる京北という地域。 
-      北山杉という杉の木が広がった森を身近に感じながら、ビールと共に皆様に豊かな自然の空気感や一次産業豊かなこの地域を皆様に知ってもらえればと思いこの場所にて醸造所を作っております。
+私たちは京都市内でクラフトビールの飲食店を運営しております。<br>
+そこから自家醸造をしたい、世界に向けて挑戦したい、という思いより、京都にてBREWERYをつくることを決意。<br>
+2023年9月より醸造開始。 京都市内ではありながらも豊かな森に囲まれた【森の京都】と呼ばれる京北という地域。 北山杉という杉の木が広がった森を身近に感じながら、ビールと共に皆様に豊かな自然の空気感や一次産業豊かなこの地域を皆様に知ってもらえればと思いこの場所にて醸造所を作っております。
 `
     },
     {
@@ -176,7 +175,7 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
     {
       img: "/logo/beer_15.png",
       name: "イーグレブルワリー",
-      add: "兵庫 / 姫路市",
+      add: "兵庫 / 姫路",
       content: `
       兵庫県から来ましたイーグレブルワリーです！<br>
       姫路城のお膝元、姫路市初のクラフトビール醸造所です。お風呂上がりにグビグビ飲める美味しいビールをたっぷりお持ちしました。<br>
@@ -201,9 +200,10 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       name: "CHORYO Craft Beer",
       add: "奈良 / 広陵町",
       content: `
-      チョウリョウクラフトビール 奈良 広陵町奈良県で日本酒・クラフトビールを醸造しており、毎月様々な新商品を発売しています。<br>
+      奈良県で日本酒・クラフトビールを醸造しており、毎月様々な新商品を発売しています。<br>
 定番のライスラガーをはじめ、バラエティ豊かな商品をお持ちします！<br>
-何が飲めるかは当日のお楽しみ��リリースはＳＮＳで随時発信していますので、要チェックです！
+何が飲めるかは当日のお楽しみ。<br>
+リリースはＳＮＳで随時発信していますので、要チェックです！
 `
     },
     {
@@ -344,7 +344,7 @@ Derailleur Brew Works直営店 スタンドうみねこ コト。<br>
     {
       img: "/logo/food_09.png",
       name: "NITO Coffee&Craft Beer",
-      add: "大阪 / 大阪市",
+      add: "大阪 / 堂島",
       content: `
       NITO Coffee&Craft Beer 「昼からビール、夜までコーヒー」がコンセプトの、 国内外から厳選された多種多様なクラフトビールと、全国各地の有名ロースターの コーヒーがたのしめるお店です。<br>
        自家焙煎のコーヒーや自家製造の焼菓子もあり、 コーヒーはもちろんビールにも合わせたペアリングを提供しています
@@ -786,7 +786,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             )}
           </div>
           <div className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
-            4/27 Mon, 4/28 Tue
+            4/27 Sun, 4/28 Mon
           </div>
           <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
             {stores_2.map((beer, index) =>
@@ -802,7 +802,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             )}
           </div>
           <div className="h-12 max-w-[768px] m-auto bg-amber-50 rounded-md flex flex-col justify-center text-center my-12 shadow font-bold text-2xl text-cl-0">
-            4/29 Wed, 4/30 Thu
+            4/29 Tue, 4/30 Wed
           </div>
           <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
             {stores_3.map((beer, index) =>
