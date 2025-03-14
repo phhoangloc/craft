@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import Link from "next/link";
 export default function Home() {
 
   const toPage = useRouter()
@@ -263,7 +264,7 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
     {
       img: "/logo/food_01.jpg",
       name: "はるまき家",
-      add: "石川 / 金沢",
+      add: "春巻き",
       content: `
 北陸初の春巻き専門店。2021年9月に70歳になる母ちゃんとキッチンカーで起業。<br>
 累計販売本数は 20万本。家族3人で 石川県を代表とするグルメを目指して 春巻きに夢を包みます。<br>
@@ -273,7 +274,7 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
     {
       img: "/logo/food_02.png",
       name: "INDIA GATE",
-      add: "京都 / 四条烏丸",
+      add: "ビリヤニ / スパイスおつまみ",
       content: `
       ビリヤニ <br> 
       スパイスおつまみ
@@ -282,7 +283,7 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
     {
       img: "/logo/food_03.jpg",
       name: "火曜腸詰倶楽部",
-      add: "京都 / 烏丸御池",
+      add: "ソーセージ",
       content: `
       京都市内の20代の同世代の飲食店員が集まってソーセージ作りを通して新しい挑戦や新しい繋がりの出来るコミュニティの場として結成された秘密結社が"火曜腸詰倶楽部"です。<br>
       美味しいソーセージを皆様に届けたい 京都の名産物や調味料、季節ごとの旬の食材また、王道な組み合わせから新しい挑戦まで幅広いソーセージを作っております。<br>
@@ -292,7 +293,7 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
     {
       img: "/logo/food_04.png",
       name: "スタンドうみねこコト",
-      add: "京都 / 河原町",
+      add: "どて煮 / 燻製おつまみ",
       content: `
 京都河原町駅から徒歩5分。<br>
 Derailleur Brew Works直営店 スタンドうみねこ コト。<br>
@@ -304,7 +305,7 @@ Derailleur Brew Works直営店 スタンドうみねこ コト。<br>
     {
       img: "/logo/food_05.png",
       name: "DE FRITES STAAN",
-      add: "京都 / 新京極",
+      add: "フリッツ（フライドポテト）",
       content: `
 阪急京都河原町駅から徒歩3分、新京極公園近くのフリッツ（フライドポテト）専門店です！<br>
 昨年は人気で完売したフリッツ、ポテト大国オランダのスタイルの味をご堪能ください。<br>
@@ -314,7 +315,7 @@ Derailleur Brew Works直営店 スタンドうみねこ コト。<br>
     {
       img: "/logo/food_06.jpg",
       name: "ボクとおじいちゃん",
-      add: "京都 / 山科",
+      add: "エスニック牛丼 / グリーンカレー	",
       content: `
 ——かつておじいちゃんが大切にしていた倉庫を孫である「ボク」が受け継ぎ、温もりのある山小屋風のカフェに。<br>
 エスニックなグリーンカレーやガパオライス、ほっとする豚汁付きおにぎりセット。<br>
@@ -325,7 +326,7 @@ Derailleur Brew Works直営店 スタンドうみねこ コト。<br>
     {
       img: "/logo/food_07.jpg",
       name: "麺処 虵の目屋",
-      add: "京都 / 河原町",
+      add: "まぜそば",
       content: `
 京都随一の繁華街、河原町にある人気ラーメン店地鶏と生揚げ醤油、自家製麺にこだわった上品で洗練された味わいを演出します。<br>
 今回はクラフトビールに合わせて限定コラボ商品を提供します。
@@ -334,7 +335,7 @@ Derailleur Brew Works直営店 スタンドうみねこ コト。<br>
     {
       img: "/logo/food_08.jpg",
       name: "モグラと夕陽",
-      add: "京都 / 山科",
+      add: "チキン南蛮丼",
       content: `
 はじめまして！ モグラと夕陽と申します！ <br>
 「6種類のタルタルから選べる京都唯一のチキン南蛮のお店」をキャッチフレーズに山科清水焼団地で店舗を構えております！<br>
@@ -344,7 +345,7 @@ Derailleur Brew Works直営店 スタンドうみねこ コト。<br>
     {
       img: "/logo/food_09.png",
       name: "NITO Coffee&Craft Beer",
-      add: "大阪 / 堂島",
+      add: "焼き菓子",
       content: `
       NITO Coffee&Craft Beer 「昼からビール、夜までコーヒー」がコンセプトの、 国内外から厳選された多種多様なクラフトビールと、全国各地の有名ロースターの コーヒーがたのしめるお店です。<br>
        自家焙煎のコーヒーや自家製造の焼菓子もあり、 コーヒーはもちろんビールにも合わせたペアリングを提供しています
@@ -353,7 +354,7 @@ Derailleur Brew Works直営店 スタンドうみねこ コト。<br>
     {
       img: "/logo/food_10.jpg",
       name: "旬菜中華バル ミツカン",
-      add: "奈良 / 橿原",
+      add: "ルーロー飯 / エビチリ / 焼売",
       content: `
 奈良県橿原市にある夫婦で営む中華居酒屋です。 <br>
 ミツカンは四川麻婆豆腐や旬の野菜で作る創作中華、お酒を楽しめるお店です。 2024年ミシュランビブグルマン獲得。<br>
@@ -577,7 +578,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
     {
       img: "/logo/store_4_01.png",
       name: "hinami（ホットドッグ）",
-      add: "京都 / 丸太町 ",
+      add: "パン / ホットドック ",
       content: `
       ヒナミ<br>
       パン　ホットドック<br>
@@ -586,7 +587,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
     {
       img: "/logo/store_4_02.png",
       name: "OKAWARI POPCORN",
-      add: "鳥取 / 倉吉 ",
+      add: "クラフトポップコーン",
       content: `
       オカワリポップコーン<br>
 クラフトポップコーン<br>
@@ -600,7 +601,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
     {
       img: "/logo/store_4_03.png",
       name: "こぐま商店（おかき）",
-      add: "大阪 / 河内長野 ",
+      add: "おかき",
       content: `
       コグマショウテン<br>
       おかき<br>
@@ -608,6 +609,87 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       自分達が美味しい楽しいと感じた商品と出会い、時には生み出し、熊のキャラクターと共に歩ませる。<br>
       見知らぬ街に弊社の熊が闊歩する事が嬉しくて日々邁進しております。そんなこぐま商店を宜しくお願い申し上げます。
       `
+    },
+  ]
+  const qa = [
+    {
+      qusetion: "当日券はありますか？",
+      answer: `現地受付ブースにてお買い求めいただけます。`
+    },
+    {
+      qusetion: "前売り券を買いました。どうしたらいいですか？",
+      answer: `会場内の受付ブースにて、ビール/フード/ご入浴に使えるシールチケットとオリジナル牛乳ビンに引換えいたします。`
+    },
+    {
+      qusetion: "当日券がなくなることはありますか？",
+      answer: `牛乳ビンの在庫が無くなり次第終了いたします。<br>
+また、お客様に充分な量の飲食物を提供できないと判断した場合は、当日券の販売をストップさせていただく場合がございます。 飲食物は充分ご用意しておりますが、商品によっては早めに売り切れとなるものもございます。<br>
+会場内に飲食物の持ち込みは可能ですか？<br>
+飲食物の持ち込みはご遠慮ください。/フード/ご入浴に使えるシールチケットとオリジナル牛乳ビンに引換えいたします。`
+    },
+    {
+      qusetion: "子どもも来場可能ですか？",
+      answer: `入場自体は無料ですので、お子様と一緒にご来場していただけます。`
+    },
+    {
+      qusetion: "ペットを連れての来場は可能ですか？",
+      answer: `はい。ただし、会場内はゲージに入れていただくようお願い申し上げます。力の湯館内はゲージに入れの持ち込みもお断り致します。`
+    },
+    {
+      qusetion: "受け取った牛乳ビンはどのように使えばいいですか？",
+      answer: `本イベントでは牛乳ビンにビールをお注ぎします。<br>
+また京都湯上がりクラフトビール祭では環境への取り組みとして、牛乳ビン・カップの再利用をお願いしております。<br>
+飲み終わりましたら会場内の洗浄コーナーでキレイにしてから、次の一杯をお買い求めください。`
+    },
+    {
+      qusetion: "牛乳ビンは持って帰ってもいいですか？",
+      answer: `お持ち帰りいただけます。また、持ち帰った牛乳ビンは次回以降のご来場の際にもご使用いただけます。 2023年・2024年モデルの牛乳ビンを持参の場合は当日の追加チケット(シール)の購入のみでご参加いただけます。`
+    },
+    {
+      qusetion: "現金でビールを買えますか？",
+      answer: `飲食物を現金で購入することはできません。チケットをご利用ください。`
+    },
+    {
+      qusetion: "バラ券(追加券)はどこで買えますか？",
+      answer: `会場内の受付ブースでお買い求めいただけます。バラ券(追加券)は3枚綴り1,800円/5枚綴り3,000円です。`
+    },
+    {
+      qusetion: "あまった飲食チケットは払い戻しできますか？",
+      answer: `購入後の変更・交換・再発行・払い戻しはできません。<br>
+また、銘柄変更および売り切れに伴うチケットの払い戻しは一切いたしませんので予めご了承ください。なお、チケットは本イベント会期中のみ有効です。`
+    },
+    {
+      qusetion: "雨天の場合はどうなりますか？",
+      answer: `雨天でも開催の予定です。<br>
+ただし、激しい雨や風などにより開催が難しいと事務局が判断した場合、中止とさせていただくことがございます。<br>
+中止の場合、公式SNSにて当日AM6：00に告知いたします。`
+    },
+    {
+      qusetion: "前売り券の払い戻しはできますか？",
+      answer: `催事が実施されない場合を除き、払い戻しは出来ませんので、予めご了承ください。`
+    },
+    {
+      qusetion: "ビンが割れた場合はどうすればいいですか？",
+      answer: `近場のスタッフにお声がけください。ビンの破片を回収したうえで代替となるプラカップをお渡しいたします。`
+    },
+    {
+      qusetion: "机やイスはありますか？",
+      answer: `限られた数ではございますが、飲食スペースをご用意しております。<br>
+基本的には立食形式となりますが、芝生はご自由にお使いいただけます。<br>
+レジャーシートや折り畳み式イスなどをご持参いただけますと、よりABC祭をお楽しみいただけます。`
+    },
+    {
+      qusetion: "アルコール以外の飲み物はありますか？",
+      answer: `会場内にはソフトドリンクのブースもございます。こちらもチケットでお買い求め頂けます。`
+    },
+    {
+      qusetion: "会場まではどのように行けばいいですか？",
+      answer: `会場は京都市営地下鉄・近鉄「竹田」駅　徒歩5分です。なお、ご来場の際は公共交通機関をお使い下さい。
+`
+    },
+    {
+      qusetion: "ビールは全てチケット１枚もしくは２枚ですか？",
+      answer: `出店者様のビールの種類によります。当日ご購入の際にご確認ください。`
     },
   ]
   const menus = [
@@ -683,10 +765,17 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
               ABOUT
             </div>
-            <div className="text-center text-2xl font-bold m-4 text-white">京都湯上がりクラフトビール祭 2025 開催決定！</div>
+            <div className="text-center text-2xl font-bold m-4 text-white">京都湯上がりクラフトビール祭 2025とは            </div>
             <p className=" text-white">
-              【クラフトビール×銭湯×紙芝居？！】第3回 「京都湯上がりクラフトビール祭 2025」開催決定！<br></br>
-              2025年5月3日（土・祝）、4日（日・祝）に京都市・伏見の力の湯に隣接する「フットサルコート内」で行います。
+              【全国から２２社の至極のブルワリーが<br></br>
+              伏見力の湯に集結！！<br></br>
+              <br></br>
+              今年も5月のGWは<br></br>
+              京都「伏見力の湯」で湯上がりに飲む<br></br>
+              最高のクラフトビールで乾杯しよう！<br></br>
+              <br></br>
+              今年は前夜祭として京都駅の駅ナカ広場「コトチカ京都」で<br></br>
+              初のクラフトビール立ち飲みイベント開催します！<br></br>
             </p>
           </div>
           <div id="beer" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
@@ -738,21 +827,59 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
               </div>
             )}
           </div>
-          <div id="beer" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
-            CAMPAIGN
+          <div id="beer" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+            GUEST
           </div>
-          <div className=" flex flex-col justify-center text-center max-w-[768px] m-auto  pb-12">
-            <div className="w-full max-w-[768px] m-auto">
-              <Image src={"/img/campain.png"} width={500} height={500} className="w-full h-auto" alt="campain" />
+          <div className="text-center text-2xl font-bold m-4 text-white">スペシャルクラフトビール紙芝居イベント開催！</div>
+          <p className=" text-white">
+            2024年に開催した上方講談師<br></br>
+            旭堂南歩さんのクラフトビール講談に続き、<br></br>
+            2025年は紙芝居師ガンチャンがブルワリーの物語を<br></br>
+            おもしろおかしくオリジナル紙芝居を繰り広げる！<br></br>
+            大人も子どもも楽しめる紙芝居×クラフトビールのハーモニー！<br></br>
+            お見逃しなく！！
+          </p>
+          <div className="h-12"></div>
+
+          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+            <div className="w-full">
+              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+
+              </div>
+              <div className="h-6"></div>
+              <div className="font-bold text-lg text-white text-center cursor-pointer hover:opacity-75">紙芝居屋のガンチャン
+              </div>
             </div>
-            <div>
-              イベント当日、京都駅改札内に掲示されているポスターから二次元コードにアクセスして、イベント会場にて1会計をしていただくと、カプセルガチャを1回まわして、景品が当たります！ はずれなし！
-              【景品引換場所】 京都駅構内 コトチカ広場
+            <div className="w-full">
+              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+
+              </div>
+              <div className="h-6"></div>
+              <div className="font-bold text-lg text-white text-center cursor-pointer hover:opacity-75">おきゃん
+              </div>
             </div>
           </div>
           <div className="h-12"></div>
+          <div id="beer" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+            MC
+          </div>
+          <p className=" text-white">
+            会場にはイベントを盛り上げるメインＭＣとして<br></br>
+            FM滋賀でレギュラーDJを務めるMC MORIYAさんが登場！
+          </p>
+          <div className="h-12"></div>
+          <div className=" max-w-[768px] m-auto gap-8">
+            <div className="w-1/2 m-auto">
+              <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+
+              </div>
+              <div className="h-6"></div>
+              <div className="font-bold text-lg text-white text-center cursor-pointer hover:opacity-75"></div>
+            </div>
+          </div>
         </div>
-      </div >
+
+      </div>
       <div className="bg-cl-0 relative z-[1]" >
 
         <Image src={"/img/banner.png"} width={500} height={500} className={`h-auto w-11/12 max-w-[500px] m-auto sticky z-[5]`} alt="banner" style={{ top: "calc(100vh - 12rem)" }} />
@@ -760,12 +887,28 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
 
         <div className=" w-full bg-cl-2 relative z-[4] p-4" id="event">
           <div className="h-12"></div>
+
           <div className="w-full max-w-[768px] m-auto flex flex-col justify-center">
             <Image src={"/img/main_event.png"} width={500} height={500} className="w-full h-auto" alt="event-logo" />
           </div>
           <div className="w-full max-w-[768px] m-auto flex flex-col justify-center">
             <Image src={"/img/main_event_2.png"} width={500} height={500} className="w-full h-auto" alt="event-logo" />
           </div>
+          <div className="h-12"></div>
+          <div id="about" className="flex flex-col justify-center h-96 w-full max-w-[768px] m-auto">
+            <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+              ABOUT
+            </div>
+            <div className="text-center text-2xl font-bold m-4 text-white">京都湯上がりクラフトビール前夜祭とは</div>
+            <p className=" text-white text-center">
+              全国11か所から16のブルワリーが参戦<br></br>
+              イベント初出店の新しいブルワリーから、京都ではなかなか飲めない遠方のビールまで、ビールとの一期一会を楽しんで。<br></br>
+              <br></br>
+              ブルワリーは1日に4社が出店。2日間ごとの入れ替わりで全16のブルワリーが集結。
+            </p>
+          </div>
+          <div className="h-12"></div>
+
           <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
             BREWERY
           </div>
@@ -832,6 +975,10 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
                 <div className={` text-white text-left px-2 my-2  overflow-hidden text-sm md:text-base ${_index === index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length ? "h-max" : "h-0"}`} dangerouslySetInnerHTML={{ __html: beer.content }}></div>              </div>
             )}
           </div>
+          <div className="h-24"></div>
+          <div className="w-full max-w-[768px] m-auto flex flex-col justify-center">
+            <Image src={"/img/evefest_schedule.png"} width={500} height={500} className="w-full h-auto" alt="event-logo" />
+          </div>
           <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
             FOOD
           </div>
@@ -849,7 +996,40 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             )}
           </div>
           <div className="h-24"></div>
-
+          <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+            CAMPAIGN
+          </div>
+          <div className=" flex flex-col justify-center text-center max-w-[768px] m-auto  pb-12">
+            <div className="w-full max-w-[768px] m-auto">
+              <Image src={"/img/campain.png"} width={500} height={500} className="w-full h-auto" alt="campain" />
+            </div>
+            <div className="text-white">
+              期間中、地下鉄に乗って前夜祭に来ると<br></br>
+              豪華景品がもらえるチャンス！<br></br>
+              京都駅構内に掲示されている二次元コードから<br></br>
+              ガチャコインをゲットして前夜祭に参加すると・・<br></br>
+              豪華景品が当たるカプセルガチャが1回引けちゃう
+            </div>
+            <div className="h-24 "></div>
+            <div className="text-white mb-4 text-lg font-bold">詳細はLINEで！</div>
+            <Link href={"https://page.line.me/hps6444z"} target="_blank">
+              <div className=" bg-white shadow-xl w-max m-auto px-8 py-2 rounded-lg text-cl-0 text-xl font-bold cursor-pointer active:text-cl-2 active:shadow-md">
+                LINEにお友達登録して参加する
+              </div>
+            </Link>
+          </div>
+          <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+            Q&A
+          </div>
+          <div className=" max-w-[575px] m-auto gap-8">
+            {qa.map((beer, index) =>
+              <div key={index} className="w-full pb-3">
+                <div className="text-lg text-white cursor-pointer font-semibold" onClick={() => set_index(i => i !== index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length + stores_4.length + stores_food.length ? index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length + stores_4.length + stores_food.length : -1)}>{beer.qusetion} <PlayArrowIcon className="!w-6 !h-6 rotate-90  mb-2" /></div>
+                <div className={` text-white text-left mt-1 mb-2  overflow-hidden text-sm md:text-base ${_index === index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length + stores_4.length + stores_food.length ? "h-max" : "h-0"}`} dangerouslySetInnerHTML={{ __html: beer.answer }}></div>
+              </div>
+            )}
+          </div>
+          <div className="h-24"></div>
         </div >
         <div className="bg-white">
           <div className=" h-60 p-4 max-w-[768px] w-full m-auto">
