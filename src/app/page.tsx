@@ -1030,22 +1030,93 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             )}
           </div>
           <div className="h-24"></div>
+          <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-3xl md:text-4xl m-auto mt-24">
+            開催概要
+          </div>
+          <div className="text-white max-w-[768px] m-auto">
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">イベント名称</div>
+              <div className="col-span-3 leading-7">「京都湯上がりクラフトビール祭2025　After Bath Craft Beer」</div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">開催日時</div>
+              <div className="col-span-3 leading-7">2025年5月3日（土・祝）～5月4日（日・祝）11：00～20：00（L.o 19：30）<br></br>
+                【受付開始】各日9：00～<br></br>
+                【入浴時間】<br></br>
+                5月3日（土・祝）9：00～24：00<br></br>（最終受付23：30）<br></br>
+                5月4日（日・祝）9：00～23：00 <br></br>（最終受付22：30）<br></br>
+                ※ご飲酒後のご入浴はお断りいたします。<br></br>
+                ※荒天中止
+              </div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">開催場所</div>
+              <div className="col-span-3 leading-7">スーパー銭湯　伏見力の湯隣接「フットサルコート内」<br></br>
+                （〒612-8426　京都市伏見区竹田青池町130）</div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">参加費</div><div className="col-span-3 leading-7">〈入場無料〉前売り券3,600円/当日券4,200円<br></br>
+                （シールチケット5枚+オリジナルロゴ牛乳ビン）<br></br>
+                ※牛乳ビンが無くなり次第終了</div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">公式Instagram</div><div className="col-span-3 leading-7 line-clamp-1"><Link href={"https://www.instagram.com/after_bath_craftbeer/"} >https://www.instagram.com/after_bath_craftbeer/ </Link></div>
+            </div>
+          </div>
+          <div className="h-24"></div>
+          <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-3xl md:text-4xl m-auto mt-24">
+            開催概要 （前夜祭）
+          </div>
+          <div className="text-white max-w-[768px] m-auto">
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">イベント名称</div>
+              <div className="col-span-3 leading-7">「京都湯上がりクラフトビール前夜祭 2025 <br></br>　After Bath Craft Beer Evefestival」</div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">開催日時</div>
+              <div className="col-span-3 leading-7">2025年4月25日（金）～5月2日（金）13：00～20：30（L.o 20：00）<br></br>
+              </div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">開催場所</div>
+              <div className="col-span-3 leading-7">コトチカ広場 （地下鉄京都駅中央1改札口外北側）
+              </div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">アクセス</div>
+              <div className="col-span-3 leading-7">地下鉄・JR「京都」駅直結<br></br>
+                ※当日は公共交通機関をご利用ください。</div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">参加費</div>
+              <div className="col-span-3 leading-7">〈〈入場無料〉単品/飲み比べセット<br></br>（ビール4杯+飲み比べトレイ/税込2,000円）の販売 <br></br>
+                ※ 飲み比べセットは無くなり次第終了<br></br>
+                ※ 飲み比べセットのビールは種類をお選びいただけません。<br></br>
+                ※ 前夜祭にて伏見力の湯で開催されるABC祭の前売券（税込3,600円）をご購入の方には、イsベントオリジナルステッカーをプレゼント！</div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">主催</div>
+              <div className="col-span-3 leading-7 line-clamp-1">株式会社メゾネット</div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">協力</div>
+              <div className="col-span-3 leading-7 line-clamp-1">京都市交通局</div>
+            </div>
+            <div className="md:grid grid-cols-4 mb-4">
+              <div className="font-bold ">協賛</div>
+              <div className="col-span-3 leading-7 line-clamp-1">マルシン飯店、Swing−By合同会社、ビール女子、株式会社TINY STAND、京都レントオール</div>
+            </div>
+          </div>
+          <div className="h-24"></div>
         </div >
+
         <div className="bg-white">
-          <div className=" h-60 p-4 max-w-[768px] w-full m-auto">
-            <div className="h-12"></div>
-            <div className="md:flex m-auto w-full">
-              <Image src={"/img/footer_01.png"} width={500} height={500} className="w-4/5 max-w-[375px] md:w-1/2 md:max-w-none !h-auto" alt="f1" />
-              <Image src={"/img/footer_02.png"} width={500} height={500} className="w-3/6 max-w-[375px] md:w-1/2 md:max-w-none !h-auto" alt="f2" />
-            </div>
-            <div className="h-2"></div>
-            <div className="flex w-full m-auto">
-              <Image src={"/img/footer_03.png"} width={500} height={500} className="w-full h-auto" alt="f2" />
-            </div>
+          <div className=" p-4 max-w-[768px] w-full m-auto">
+            <Image src={"/img/footer_logo@4x.png"} width={500} height={500} className="w-full h-auto" alt="f2" />
           </div>
         </div>
         <div className="h-60 bg-white"></div>
-      </div>
+      </div >
     </>
   );
 }
