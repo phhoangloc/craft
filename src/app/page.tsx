@@ -577,7 +577,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
   const stores_food = [
     {
       img: "/logo/store_4_01.png",
-      name: "hinami（ホットドッグ）",
+      name: "hinami",
       add: "パン / ホットドック ",
       content: `
       ヒナミ<br>
@@ -600,7 +600,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
     },
     {
       img: "/logo/store_4_03.png",
-      name: "こぐま商店（おかき）",
+      name: "こぐま商店",
       add: "おかき",
       content: `
       コグマショウテン<br>
@@ -695,7 +695,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
   const menus = [
     {
       name: "TOP",
-      link: "/#"
+      link: "/#top"
 
     },
     {
@@ -718,7 +718,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
   return (
     <>
       <Loading hidden={_hidden} />
-      <div className={`hidden lg:block lg:fixed p-4 lg:w-1/6 z-[2] top-0 h-full left-0 transition-all duration-300 ease-in-out ${scrollY > 200 && scrollY < 1200 ? " opacity-0" : " opacity-100"}`}>
+      <div id="top" className={`hidden lg:block lg:fixed p-4 lg:w-1/6 z-[2] top-0 h-full left-0 transition-all duration-300 ease-in-out ${scrollY > 200 && scrollY < 1200 ? " opacity-0" : " opacity-100"}`}>
         <Image src={"/img/menu_logo.png"} width={500} height={500} className="h-auto w-full  max-w-[250px] m-auto" alt="foam" />
         {menus.map((beer, index) =>
           <div className="text-white text-2xl pl-8 mt-3 cursor-pointer " style={{ fontFamily: 'Dela Gothic One' }} onClick={() => toPage.push("/" + beer.link)} key={index}>{beer.name}</div>
@@ -767,7 +767,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             </div>
             <div className="text-center text-2xl font-bold m-4 text-white">京都湯上がりクラフトビール祭 2025とは            </div>
             <p className=" text-white">
-              【全国から２２社の至極のブルワリーが<br></br>
+              全国から２２社の至極のブルワリーが<br></br>
               伏見力の湯に集結！！<br></br>
               <br></br>
               今年も5月のGWは<br></br>
