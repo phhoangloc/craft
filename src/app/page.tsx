@@ -447,10 +447,10 @@ Free Spiritsは【自由気まま】を意味し、固定観念に捉われな�
   const stores_2 = [
     {
       img: "/logo/store_2_01.jpg",
-      name: "一乗寺ブリュワリー",
+      name: "京都・一乗寺ブリュワリー",
       add: "京都 / 一乗寺",
       content: `
-一乗寺ブリュワリーは、 自分らしく生きる人たちに飲んでほしいクラフトビールです。<br>
+京都・一乗寺ブリュワリーは、 自分らしく生きる人たちに飲んでほしいクラフトビールです。<br>
 比叡山の麓にて、伝統的な味わいの中に新しい驚きを秘めた京都らしいビール造りを目指しています。
 `
     },
@@ -503,16 +503,6 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
 `
     },
     {
-      img: "/logo/store_3_02.jpg",
-      name: "日々一泡ブルワリー",
-      add: "大阪 / 福島",
-      content: `
-大阪福島の高架下に新たに開業した、“日常にひと泡吹かせる醸造所”「日々一泡ブルワリー」です。<br>
-新しいブルワリーで初めて自分たちで醸造したビールをお持ちします。<br>
-ファーストバッチを一緒に味わってください！
-`
-    },
-    {
       img: "/logo/beer_17.png",
       name: "CHORYO Craft Beer",
       add: "奈良 / 広陵町",
@@ -520,6 +510,15 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       チョウリョウクラフトビール 奈良 広陵町奈良県で日本酒・クラフトビールを醸造しており、毎月様々な新商品を発売しています。<br>
 定番のライスラガーをはじめ、バラエティ豊かな商品をお持ちします！<br>
 何が飲めるかは当日のお楽しみ��リリースはＳＮＳで随時発信していますので、要チェックです！
+`
+    },
+    {
+      img: "/logo/famentary.png",
+      name: "FARMENTRY",
+      add: "奈良 / 橿原市",
+      content: `
+奈良県橿原市にて2024年8月より醸造開始。<br>
+社名はFARM+ENTRYとFerment-ryを掛た造語で、農醸一貫を目指したビール造りを志しています。
 `
     },
     {
@@ -844,7 +843,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
           <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
             <div className="w-full">
               <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
-
+                <Image src={"/img/ganchan.jpg"} alt="ganchan" fill className="object-cover" />
               </div>
               <div className="h-6"></div>
               <div className="font-bold text-lg text-white text-center cursor-pointer hover:opacity-75">紙芝居屋のガンチャン
@@ -852,7 +851,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             </div>
             <div className="w-full">
               <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
-
+                <Image src={"/img/okyan.jpg"} alt="okyan" fill className="object-cover" />
               </div>
               <div className="h-6"></div>
               <div className="font-bold text-lg text-white text-center cursor-pointer hover:opacity-75">おきゃん
@@ -871,6 +870,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
           <div className=" max-w-[768px] m-auto gap-8">
             <div className="w-1/2 m-auto">
               <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                <Image src={"/img/mc_moriya.jpg"} alt="mc_moriya" fill className="object-cover" />
 
               </div>
               <div className="h-6"></div>
