@@ -12,6 +12,7 @@ export default function Home() {
 
   const [_hidden, set_hidden] = useState<boolean>(false)
   const [_index, set_index] = useState<number>(-1)
+  const [_isMenu, set_isMenu] = useState<boolean>(false)
 
   useEffect(() => {
     setTimeout(() => {
@@ -737,13 +738,18 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
   return (
     <>
       <Loading hidden={_hidden} />
-      <div id="top" className={`hidden lg:block lg:fixed p-4 lg:w-1/6 z-[2] top-0 h-full left-0 transition-all duration-300 ease-in-out ${scrollY > 200 && scrollY < 1200 ? " opacity-0" : " opacity-100"}`}>
+      <div id="top"
+        className={`fixed lg:block p-4 lg:w-1/6 z-[2] top-0 h-4/5 lg:h-full lg:translate-y-[0%] w-full left-0 transition-all duration-300 ease-in-out ${scrollY > 200 && scrollY < 1200 ? " opacity-0" : " opacity-100"} ${_isMenu ? "translate-y-[0%] bg-cl-1 lg:bg-transparent" : "translate-y-[-92.5%]"}`}>
         <Image src={"/img/menu_logo.png"} width={500} height={500} className="h-auto w-full  max-w-[250px] m-auto" alt="foam" />
         {menus.map((beer, index) =>
-          <div className="text-white text-2xl pl-8 mt-3 cursor-pointer " style={{ fontFamily: 'Dela Gothic One' }} key={index}>
+          <div className="text-white text-2xl lg:pl-8 mt-3 cursor-pointer text-center lg:text-left " style={{ fontFamily: 'Dela Gothic One' }} key={index} onClick={() => set_isMenu(false)}>
             <Link href={beer.link} target={beer.link.includes("#") ? "" : "_blank"}>{beer.name}</Link>
           </div>
         )}
+        <div className="w-max m-auto flex flex-col">
+          <PlayArrowIcon className={`lg:!hidden text-white ${_isMenu ? "-rotate-90" : "rotate-90"} !w-8 !h-8`} onClick={() => set_isMenu(!_isMenu)} />
+          <div className=" lg:!hidden text-xs font-bold text-white">MENU</div>
+        </div>
       </div>
       <div className="relative bg-cl-1 z-0">
 
