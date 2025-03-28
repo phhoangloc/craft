@@ -2,12 +2,12 @@
 import Loading from "@/components/loading";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Link from "next/link";
 export default function Home() {
 
-  const toPage = useRouter()
+  // const toPage = useRouter()
 
 
   const [_hidden, set_hidden] = useState<boolean>(false)
@@ -702,6 +702,10 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       link: "#about"
     },
     {
+      name: "TICKET",
+      link: "https://l-tike.com/event/mevent/?mid=745173"
+    },
+    {
       name: "BREWERY",
       link: "#beer"
     },
@@ -710,8 +714,24 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       link: "#food"
     },
     {
-      name: "EVENT",
+      name: "ACCESS",
+      link: "#access"
+    },
+    {
+      name: "EVE FES",
       link: "#event"
+    },
+    {
+      name: "CAMPAIGN",
+      link: "#campaign"
+    },
+    {
+      name: "Q&A",
+      link: "#q&a"
+    },
+    {
+      name: "INSTAGRAM",
+      link: "https://www.instagram.com/after_bath_craftbeer/"
     },
   ]
   return (
@@ -720,7 +740,9 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       <div id="top" className={`hidden lg:block lg:fixed p-4 lg:w-1/6 z-[2] top-0 h-full left-0 transition-all duration-300 ease-in-out ${scrollY > 200 && scrollY < 1200 ? " opacity-0" : " opacity-100"}`}>
         <Image src={"/img/menu_logo.png"} width={500} height={500} className="h-auto w-full  max-w-[250px] m-auto" alt="foam" />
         {menus.map((beer, index) =>
-          <div className="text-white text-2xl pl-8 mt-3 cursor-pointer " style={{ fontFamily: 'Dela Gothic One' }} onClick={() => toPage.push("/" + beer.link)} key={index}>{beer.name}</div>
+          <div className="text-white text-2xl pl-8 mt-3 cursor-pointer " style={{ fontFamily: 'Dela Gothic One' }} key={index}>
+            <Link href={beer.link} target={beer.link.includes("#") ? "" : "_blank"}>{beer.name}</Link>
+          </div>
         )}
       </div>
       <div className="relative bg-cl-1 z-0">
@@ -744,7 +766,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
           <div className="hidden lg:block p-4 lg:w-1/6">
           </div>
           <div className="absolute right-0 top-[900px] lg:top-[550px] w-full z-[1] max-w-[375px]">
-            <Image src={"/img/infor_right.png"} width={500} height={500} className="h-full !w-auto ml-auto mr-0" alt="foam" />
+            <Link href={"https://l-tike.com/event/mevent/?mid=745173"} target={"_blank"}><Image src={"/img/infor_right.png"} width={500} height={500} className="h-full !w-auto ml-auto mr-0" alt="foam" /></Link>
           </div>
         </div>
 
@@ -877,12 +899,27 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
               <div className="font-bold text-lg text-white text-center cursor-pointer hover:opacity-75"></div>
             </div>
           </div>
+          <div id="access" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+            ACCESS
+          </div>
+          <p className=" text-white text-3xl font-bold">
+            京都伏見のスーパー銭湯 力の湯
+          </p>
+          <div className="h-4"></div>
+          <p className=" text-white">
+            〒612-8426 <br></br> 京都府京都市伏見区竹田青池町１３０
+          </p>
+          <div className="h-12"></div>
+          <iframe className="w-full max-w-[768px] m-auto aspect-video" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.9748366797867!2d135.7487436763196!3d34.957239369404036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001058a8e9b9865%3A0x33a262f9e3393248!2z5LyP6KaL5Yqb44Gu5rmv!5e0!3m2!1sja!2sjp!4v1743153300855!5m2!1sja!2sjp"></iframe>
         </div>
+        <div className="h-12"></div>
 
       </div>
       <div className="bg-cl-0 relative z-[1]" >
 
-        <Image src={"/img/banner.png"} width={500} height={500} className={`h-auto w-11/12 max-w-[500px] m-auto sticky z-[5]`} alt="banner" style={{ top: "calc(100vh - 12rem)" }} />
+        <Link href={"https://l-tike.com/event/mevent/?mid=745173"} target={"_blank"}>
+          <Image src={"/img/banner.png"} width={500} height={500} className={`h-auto w-11/12 max-w-[500px] m-auto sticky z-[5]`} alt="banner" style={{ top: "calc(100vh - 12rem)" }} />
+        </Link>
         <div className="h-48"></div>
 
         <div className=" w-full bg-cl-2 relative z-[4] p-4" id="event">
@@ -996,7 +1033,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             )}
           </div>
           <div className="h-24"></div>
-          <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+          <div id="campaign" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
             CAMPAIGN
           </div>
           <div className=" flex flex-col justify-center text-center max-w-[768px] m-auto  pb-12">
@@ -1018,7 +1055,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
               </div>
             </Link>
           </div>
-          <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+          <div id="q&a" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
             Q&A
           </div>
           <div className=" max-w-[575px] m-auto gap-8">
