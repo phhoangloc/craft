@@ -739,7 +739,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
     <>
       <Loading hidden={_hidden} />
       <div id="top"
-        className={`fixed lg:block p-4 lg:w-1/6 z-[2] top-0 h-4/5 lg:h-full lg:translate-y-[0%] w-full left-0 transition-all duration-300 ease-in-out ${scrollY > 200 && scrollY < 1200 ? " opacity-0" : " opacity-100"} ${_isMenu ? "translate-y-[0%] bg-cl-1 lg:bg-transparent" : "translate-y-[-92.5%]"}`}>
+        className={`fixed lg:block p-4 lg:w-1/6 z-[2] top-0 h-[700px] overflow-auto lg:h-full lg:translate-y-[0%] w-full left-0 transition-all duration-300 ease-in-out ${scrollY > 200 && scrollY < 1200 ? " opacity-0" : " opacity-100"} ${_isMenu ? "translate-y-[0%] bg-cl-1 lg:bg-transparent" : "translate-y-[-630px]"}`}>
         <Image src={"/img/menu_logo.png"} width={500} height={500} className="h-auto w-full  max-w-[250px] m-auto" alt="foam" />
         {menus.map((beer, index) =>
           <div className="text-white text-2xl lg:pl-8 mt-3 cursor-pointer text-center lg:text-left " style={{ fontFamily: 'Dela Gothic One' }} key={index} onClick={() => set_isMenu(false)}>
