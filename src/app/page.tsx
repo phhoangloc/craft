@@ -576,6 +576,13 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
   ]
   const stores_food = [
     {
+      img: "/logo/spicetry_logo@4x.png",
+      name: "SPICE TRY",
+      add: "スパイスカレー",
+      content: `
+      `
+    },
+    {
       img: "/logo/store_4_01.png",
       name: "hinami",
       add: "パン / ホットドック ",
@@ -610,6 +617,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       見知らぬ街に弊社の熊が闊歩する事が嬉しくて日々邁進しております。そんなこぐま商店を宜しくお願い申し上げます。
       `
     },
+
   ]
   const qa = [
     {
@@ -746,8 +754,8 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             <Link href={beer.link} target={beer.link.includes("#") ? "" : "_blank"}>{beer.name}</Link>
           </div>
         )}
-        <div className="w-max m-auto flex flex-col">
-          <PlayArrowIcon className={`lg:!hidden text-white ${_isMenu ? "-rotate-90" : "rotate-90"} !w-8 !h-8`} onClick={() => set_isMenu(!_isMenu)} />
+        <div className="w-max m-auto flex flex-col cursor-pointer" onClick={() => set_isMenu(!_isMenu)}>
+          <PlayArrowIcon className={`lg:!hidden text-white ${_isMenu ? "-rotate-90" : "rotate-90"} !w-8 !h-8`} />
           <div className=" lg:!hidden text-xs font-bold text-white">MENU</div>
         </div>
       </div>
