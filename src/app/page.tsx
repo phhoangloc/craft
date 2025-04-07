@@ -1,7 +1,7 @@
 'use client'
 import Loading from "@/components/loading";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { Ref, useEffect, useRef, useState } from "react";
 // import { useRouter } from "next/navigation";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Link from "next/link";
@@ -146,8 +146,7 @@ export default function Home() {
       img: "/logo/beer_12.png",
       name: "銭湯醸造 上方ビール",
       add: "大阪 / 淡路",
-      content: `
-セントウジョウゾウ　カミガタビール 大阪 淡路銭湯跡地をリノベーションした日本初の銭湯ビール醸造所。<br>
+      content: `大阪 淡路銭湯跡地をリノベーションした日本初の銭湯ビール醸造所。<br>
 多様化する様々な食に合うビールを造り、同じ味は作らず常に新しいビールを造っています。
 `
 
@@ -202,10 +201,9 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       name: "CHORYO Craft Beer",
       add: "奈良 / 広陵町",
       content: `
-      奈良県で日本酒・クラフトビールを醸造しており、毎月様々な新商品を発売しています。<br>
+       奈良 広陵町奈良県で日本酒・クラフトビールを醸造しており、毎月様々な新商品を発売しています。<br>
 定番のライスラガーをはじめ、バラエティ豊かな商品をお持ちします！<br>
-何が飲めるかは当日のお楽しみ。<br>
-リリースはＳＮＳで随時発信していますので、要チェックです！
+何が飲めるかは当日のお楽しみ��リリースはＳＮＳで随時発信していますので、要チェックです！
 `
     },
     {
@@ -408,7 +406,7 @@ Derailleur Brew Works直営店 スタンドうみねこ コト。<br>
       name: "銭湯醸造 上方ビール",
       add: "大阪 / 淡路",
       content: `
-セントウジョウゾウ　カミガタビール 大阪 淡路銭湯跡地をリノベーションした日本初の銭湯ビール醸造所。<br>
+      大阪 淡路銭湯跡地をリノベーションした日本初の銭湯ビール醸造所。<br>
 多様化する様々な食に合うビールを造り、同じ味は作らず常に新しいビールを造っています。
 `
     },
@@ -508,7 +506,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       name: "CHORYO Craft Beer",
       add: "奈良 / 広陵町",
       content: `
-      チョウリョウクラフトビール 奈良 広陵町奈良県で日本酒・クラフトビールを醸造しており、毎月様々な新商品を発売しています。<br>
+      奈良 広陵町奈良県で日本酒・クラフトビールを醸造しており、毎月様々な新商品を発売しています。<br>
 定番のライスラガーをはじめ、バラエティ豊かな商品をお持ちします！<br>
 何が飲めるかは当日のお楽しみ��リリースはＳＮＳで随時発信していますので、要チェックです！
 `
@@ -587,8 +585,6 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       name: "hinami",
       add: "パン / ホットドック ",
       content: `
-      ヒナミ<br>
-      パン　ホットドック<br>
       `
     },
     {
@@ -596,9 +592,6 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       name: "OKAWARI POPCORN",
       add: "クラフトポップコーン",
       content: `
-      オカワリポップコーン<br>
-クラフトポップコーン<br>
-<br>
 初めまして。鳥取県の小さな手作りポップコーン専門店です。<br>
 希少な国産とうもろこしを使用した、20種類以上のオリジナルフレーバーをご用意しております。<br>
 イチオシは鳥取食材で味付けした無添加の鳥取ポップコーンシリーズ。<br>
@@ -610,11 +603,49 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       name: "こぐま商店",
       add: "おかき",
       content: `
-      コグマショウテン<br>
-      おかき<br>
-      <br>
       自分達が美味しい楽しいと感じた商品と出会い、時には生み出し、熊のキャラクターと共に歩ませる。<br>
       見知らぬ街に弊社の熊が闊歩する事が嬉しくて日々邁進しております。そんなこぐま商店を宜しくお願い申し上げます。
+      `
+    },
+
+  ]
+  const partner = [
+    {
+      img: "/logo/partner_01.png",
+      name: "KIYASUME",
+      add: "",
+      content: `
+      イベント開催の2日間、「スーパー銭湯 伏見力の湯」入浴の方に<br>
+フロントにてサウナドリンク「kiyasume」のサンプリングを配布！<br>
+1日先着500名様限定です。
+      `
+    },
+    {
+      img: "/logo/partner_02.png",
+      name: "プレミアムウォーター",
+      add: "",
+      content: `
+      イベント開催の2日間、受付ブース横にて来場者にプレミアムウォーターの試飲会を実施。<br>
+美味しいクラフトビールの前に…先ずは水を1杯飲んでから！<br>
+プレミアムウォーター様の天然水を適度に補給しながら、自分に合ったペースでイベントをお楽しみください。
+      `
+    },
+    {
+      img: "/logo/partner_03.png",
+      name: "サ道流忍者 熱風",
+      add: "",
+      content: `
+「サ道流忍者 熱風」のキャラクターが伏見力の湯にやってくる！<br>
+「サウナの平和は俺たちが守る！」<br>
+サウナに出没するサウナ迷惑妖怪からサウナの平和を守る為、サ道流忍者 熱風が今日も行く
+サウナはマナーを守って健やかなサウナ習慣を楽しみましょう！
+      `
+    },
+    {
+      img: "",
+      name: "明治",
+      add: "",
+      content: `
       `
     },
 
@@ -631,9 +662,11 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
     {
       qusetion: "当日券がなくなることはありますか？",
       answer: `牛乳ビンの在庫が無くなり次第終了いたします。<br>
-また、お客様に充分な量の飲食物を提供できないと判断した場合は、当日券の販売をストップさせていただく場合がございます。 飲食物は充分ご用意しておりますが、商品によっては早めに売り切れとなるものもございます。<br>
-会場内に飲食物の持ち込みは可能ですか？<br>
-飲食物の持ち込みはご遠慮ください。/フード/ご入浴に使えるシールチケットとオリジナル牛乳ビンに引換えいたします。`
+また、お客様に充分な量の飲食物を提供できないと判断した場合は、当日券の販売をストップさせていただく場合がございます。 飲食物は充分ご用意しておりますが、商品によっては早めに売り切れとなるものもございます。`
+    },
+    {
+      qusetion: "会場内に飲食物の持ち込みは可能ですか？",
+      answer: `飲食物の持ち込みはご遠慮ください。<br> フード/ご入浴に使えるシールチケットとオリジナル牛乳ビンに引換えいたします。`
     },
     {
       qusetion: "子どもも来場可能ですか？",
@@ -699,6 +732,11 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       qusetion: "ビールは全てチケット１枚もしくは２枚ですか？",
       answer: `出店者様のビールの種類によります。当日ご購入の際にご確認ください。`
     },
+    {
+      qusetion: "決済は使えますか?",
+      answer: `ビールにはご利用いただけません。<br>
+フード及びグッズに限りPayPayのみご利用いただけます。`
+    },
   ]
   const menus = [
     {
@@ -743,6 +781,11 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       link: "https://www.instagram.com/after_bath_craftbeer/"
     },
   ]
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const pannerRef = useRef<any>("")
+
+  console.log(scrollY - screen.height, pannerRef.current.offsetTop)
   return (
     <>
       <Loading hidden={_hidden} />
@@ -813,6 +856,10 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
               初のクラフトビール立ち飲みイベント開催します！<br></br>
             </p>
           </div>
+          <div className="h-24"></div>
+          <Link href={"https://l-tike.com/event/mevent/?mid=745173"} target={"_blank"}>
+            <Image src={"/img/banner.png"} width={500} height={500} className={`h-auto w-11/12 max-w-[500px] m-auto sticky z-[5]`} alt="banner" style={{ top: "calc(100vh - 13rem)", opacity: scrollY >= pannerRef.current.offsetTop ? "0" : "1", transition: "all 0.25s" }} />
+          </Link>
           <div id="beer" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
             BREWERY
           </div>
@@ -907,11 +954,26 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             <div className="w-1/2 m-auto">
               <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
                 <Image src={"/img/mc_moriya.jpg"} alt="mc_moriya" fill className="object-cover" />
-
               </div>
               <div className="h-6"></div>
               <div className="font-bold text-lg text-white text-center cursor-pointer hover:opacity-75"></div>
             </div>
+          </div>
+          <div id="beer" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+            パートナーブース
+          </div>
+          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+            {partner.map((beer, index) =>
+              <div key={index} className="w-full">
+                <div className="aspect-square w-full relative rounded-lg overflow-hidden bg-white">
+                  {beer.img ? <Image src={beer.img} fill className="object-contain p-4" alt={beer.name} /> : <div className="w-full h-full bg-white"></div>}
+                </div>
+                <div className="h-6"></div>
+                <div className="font-bold text-lg text-white text-center cursor-pointer hover:opacity-75" onClick={() => set_index(i => i !== index + beers.length - 1 + foods.length ? index + beers.length - 1 + foods.length : -1)}>{beer.name} <PlayArrowIcon className="!w-6 !h-6 rotate-90  mb-2" /></div>
+                <div className=" text-white text-center opacity-75">{beer.add}</div>
+                <div className={` text-white text-left px-2 my-2  overflow-hidden text-sm md:text-base ${_index === index + beers.length - 1 + foods.length ? "h-max" : "h-0"}`} dangerouslySetInnerHTML={{ __html: beer.content }}></div>
+              </div>
+            )}
           </div>
           <div id="access" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
             ACCESS
@@ -925,14 +987,15 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
           </p>
           <div className="h-12"></div>
           <iframe className="w-full max-w-[768px] m-auto aspect-video" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.9748366797867!2d135.7487436763196!3d34.957239369404036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001058a8e9b9865%3A0x33a262f9e3393248!2z5LyP6KaL5Yqb44Gu5rmv!5e0!3m2!1sja!2sjp!4v1743153300855!5m2!1sja!2sjp"></iframe>
+          <div className="h-60" ref={pannerRef}></div>
+
         </div>
-        <div className="h-12"></div>
 
       </div>
       <div className="bg-cl-0 relative z-[1]" >
 
         <Link href={"https://l-tike.com/event/mevent/?mid=745173"} target={"_blank"}>
-          <Image src={"/img/banner.png"} width={500} height={500} className={`h-auto w-11/12 max-w-[500px] m-auto sticky z-[5]`} alt="banner" style={{ top: "calc(100vh - 12rem)" }} />
+          <Image src={"/img/banner.png"} width={500} height={500} className={`h-auto w-11/12 max-w-[500px] m-auto sticky z-[5]`} alt="banner" style={{ top: "calc(100vh - 13rem)" }} />
         </Link>
         <div className="h-48"></div>
 
@@ -1069,8 +1132,8 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
               </div>
             </Link>
           </div>
-          <div id="q&a" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
-            Q&A
+          <div id="q&a" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+            本祭 Q&A
           </div>
           <div className=" max-w-[575px] m-auto gap-8">
             {qa.map((beer, index) =>
@@ -1079,6 +1142,12 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
                 <div className={` text-white text-left mt-1 mb-2  overflow-hidden text-sm md:text-base ${_index === index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length + stores_4.length + stores_food.length ? "h-max" : "h-0"}`} dangerouslySetInnerHTML={{ __html: beer.answer }}></div>
               </div>
             )}
+          </div>
+          <div id="q&a" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+            前夜祭 Q&A
+          </div>
+          <div className=" max-w-[575px] m-auto gap-8">
+            <div className="text-lg text-white cursor-pointer font-semibold text-center">準備中</div>
           </div>
           <div className="h-24"></div>
           <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-3xl md:text-4xl m-auto mt-24">
@@ -1159,6 +1228,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             </div>
           </div>
           <div className="h-24"></div>
+
         </div >
 
         <div className="bg-white">
