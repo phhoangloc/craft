@@ -1,7 +1,7 @@
 'use client'
 import Loading from "@/components/loading";
 import Image from "next/image";
-import { Ref, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 // import { useRouter } from "next/navigation";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Link from "next/link";
@@ -785,7 +785,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const pannerRef = useRef<any>("")
 
-  console.log(scrollY - screen.height, pannerRef.current.offsetTop)
+  // console.log(scrollY - screen.height, pannerRef.current.offsetTop)
   return (
     <>
       <Loading hidden={_hidden} />
