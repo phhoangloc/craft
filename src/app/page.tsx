@@ -169,7 +169,7 @@ export default function Home() {
       name: "銭湯醸造 上方ビール",
       add: "大阪 / 淡路",
       guide_one: `セゾンビール/セゾン【ABV） 5.0%`,
-      guide_two: `ヘラクリス <br> ポーター【ABV】6.0%`,
+      guide_two: `ヘラクレス <br> ポーター【ABV】6.0%`,
       content: `大阪 淡路銭湯跡地をリノベーションした日本初の銭湯ビール醸造所。<br>
 多様化する様々な食に合うビールを造り、同じ味は作らず常に新しいビールを造っています。`
     },
@@ -250,7 +250,7 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_19.png",
       name: "RISE＆WIN Brewing Co./KAMIKATZ BEER",
       add: "徳島 / 上勝町",
-      guide_one: `モーニングサウナー/ピルスナー【ABV】 5.0%`,
+      guide_one: `モーニングサウナー<br>ピルスナー【ABV】 5.0%`,
       guide_two: `HAPPY NUTS HOUR <br> ベルジャンホワイト【ABV】5.0%`,
       content: `
       美味しいビールを楽しむだけで「環境にちょっと良いコト」に繋がっている。<br>
@@ -289,8 +289,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_22.jpg",
       name: "別府ブルワリー",
       add: "大分 / 別府",
-      guide_one: `Kabosu Saison / Fruited Sour Saison w/ Kabosu ABV 4.0%`,
-      guide_two: `チャイミー★シャイニー/Fruited Sour Ale w/Cherry. Guava & Edible Glitters ABV 4.0%`,
+      guide_one: `Kabosu Saison <br> Fruited Sour Saison w/ Kabosu ABV 4.0%`,
+      guide_two: `チャイミー★シャイニー<br>Fruited Sour Ale w/Cherry. Guava & Edible Glitters ABV 4.0%`,
       content: `
 2022年11月に初めて醸造を開始した大分県別府市で唯一のクラフトビール醸造所です。<br>
 別府観光のお土産だけにとどまらない、全国から別府へ人を呼び寄せるようなクラフトビールづくりを行っています。“湯あがり”をコンセプトに醸造したオリジナリティ溢れるクラフトビールで「旅を潤す」至福の時間をお届けします。<br>
