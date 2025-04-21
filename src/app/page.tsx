@@ -1036,8 +1036,8 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
           </div>
           <div className="h-24"></div>
           <Link href={"https://l-tike.com/event/mevent/?mid=745173"} target={"_blank"}>
-            <div className={`h-auto w-full sticky z-[5] backdrop-blur-xs backdrop-brightness-110 rounded-xl py-4 shadow `} style={{ top: "calc(100vh - 15rem)", opacity: scrollY >= pannerRef.current.offsetTop ? "0" : "1", transition: "all 0.25s" }}>
-              <Image src={"/img/banner.png"} width={500} height={500} alt="banner" className="m-auto" />
+            <div className={`h-auto w-full sticky z-[5] backdrop-blur-xs backdrop-brightness-110 rounded-xl p-2 shadow `} style={{ top: "calc(100vh - 9.5rem)", opacity: scrollY >= pannerRef.current.offsetTop ? "0" : "1", transition: "all 0.25s" }}>
+              <Image src={"/img/banner.png"} width={500} height={500} alt="banner" className="m-auto w-full max-w-[325px]" />
             </div>
           </Link>
           <div id="beer" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
@@ -1177,8 +1177,8 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       <div className="bg-cl-0 relative z-[1]" >
 
         <Link href={"https://l-tike.com/event/mevent/?mid=745173"} target={"_blank"}>
-          <div className={`h-auto w-full sticky z-[5] backdrop-blur-xs backdrop-brightness-110 rounded-xl py-4 shadow `} style={{ top: "calc(100vh - 15rem)" }}>
-            <Image src={"/img/banner.png"} width={500} height={500} alt="banner" className="m-auto" />
+          <div className={`h-auto sticky z-[5] backdrop-blur-xs backdrop-brightness-110 rounded-xl py-4 shadow mx-4`} style={{ top: "calc(100vh - 10.5rem)", width: "calc(100% - 36px)" }}>
+            <Image src={"/img/banner.png"} width={500} height={500} alt="banner" className="w-11/12 max-w-[325px] m-auto" />
           </div>
         </Link>
         <div className="h-48"></div>
