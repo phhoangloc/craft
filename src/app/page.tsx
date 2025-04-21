@@ -1029,9 +1029,16 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
               初のクラフトビール立ち飲みイベント開催します！<br></br>
             </p>
           </div>
+          <div className="max-w-[768px] m-auto mt-24 bg-white">
+            <Link href={"/pdf/areamap.pdf"} target={"_blank"}>
+              <Image src={"/img/areamap.png"} width={500} height={500} className={`w-full `} alt="map" />
+            </Link>
+          </div>
           <div className="h-24"></div>
           <Link href={"https://l-tike.com/event/mevent/?mid=745173"} target={"_blank"}>
-            <Image src={"/img/banner.png"} width={500} height={500} className={`h-auto w-11/12 max-w-[500px] m-auto sticky z-[5]`} alt="banner" style={{ top: "calc(100vh - 13rem)", opacity: scrollY >= pannerRef.current.offsetTop ? "0" : "1", transition: "all 0.25s" }} />
+            <div className={`h-auto w-full sticky z-[5] backdrop-blur-xs backdrop-brightness-110 rounded-xl py-4 shadow `} style={{ top: "calc(100vh - 15rem)", opacity: scrollY >= pannerRef.current.offsetTop ? "0" : "1", transition: "all 0.25s" }}>
+              <Image src={"/img/banner.png"} width={500} height={500} alt="banner" className="m-auto" />
+            </div>
           </Link>
           <div id="beer" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
             BREWERY
@@ -1170,7 +1177,9 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       <div className="bg-cl-0 relative z-[1]" >
 
         <Link href={"https://l-tike.com/event/mevent/?mid=745173"} target={"_blank"}>
-          <Image src={"/img/banner.png"} width={500} height={500} className={`h-auto w-11/12 max-w-[500px] m-auto sticky z-[5]`} alt="banner" style={{ top: "calc(100vh - 13rem)" }} />
+          <div className={`h-auto w-full sticky z-[5] backdrop-blur-xs backdrop-brightness-110 rounded-xl py-4 shadow `} style={{ top: "calc(100vh - 15rem)" }}>
+            <Image src={"/img/banner.png"} width={500} height={500} alt="banner" className="m-auto" />
+          </div>
         </Link>
         <div className="h-48"></div>
 
