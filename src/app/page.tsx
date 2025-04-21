@@ -361,6 +361,20 @@ Derailleur Brew Works直営店 スタンドうみねこ コト。<br>
 どれもビールに合う料理なんで是非楽しみにしててください。
 `
     },
+    {
+      img: "/logo/food_11.png",
+      name: "Kyo Trend.",
+      add: "クラフトコーラ / ソフトドリンク",
+      content: `
+Kyo Trend.は、自然食品卸の(有)樹商事が、これまでの活動の中でご縁のあった方々と一緒に面白い物を作るブランドです。
+<br>
+<br>
+京都クラフトコーラNo.0は、]三条木屋町で20年以上愛されていたバーのマスター達と共同開発して生まれたスパイスコーラシロップです。
+<br>
+<br>
+炭酸はもちろん、お酒や紅茶等、色々な物と合わせられる為に、スパイスの香りが混ぜるものと上手く合うように拘った、甘ったるさの無いクラフトコーラです。
+`
+    },
   ]
   const kitchens = [
     {
@@ -752,6 +766,110 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       answer: `ビールにはご利用いただけません。<br>
 フード及びグッズに限りPayPayのみご利用いただけます。`
     },
+  ]
+  const qabefore = [
+    {
+      qusetion: "予約は必要ですか？",
+      answer: `予約不要でご参加いただけます。お仕事帰りや観光の合間に、ふらっとお立ち寄りください。`
+    },
+    {
+      qusetion: "入場料はかかりますか？",
+      answer: `入場無料です。お好きなビールをご購入いただくスタイルです。`
+    },
+    {
+      qusetion: "当日券がなくなることはありますか？",
+      answer: `関西を中心に、全国各地のブルワリーから個性豊かなクラフトビールをご用意しています。<br>
+ブルワリーは出店スケジュールをご確認ください。
+`
+    },
+    {
+      qusetion: "フードの提供はありますか？",
+      answer: `トムヤム春巻きやパクチー餃子、ホットドッグ、ポップコーンやおかきをご用意しております。クラフトビールに合うおつまみをお楽しみください。`
+    },
+    {
+      qusetion: "会場内は座れますか？",
+      answer: `立ち飲み形式のイベントです。テーブルは相席となる場合がございますので、譲り合ってご利用ください。`
+    },
+    {
+      qusetion: " お支払い方法は？",
+      answer: ` 各種クレジットカード・電子マネー・バーコード決済がご利用いただけます。現金はご利用いただけません。<br>
+※一部、フードは現金のみのお取り扱いになる可能性がございます。
+`
+    },
+    {
+      qusetion: "未成年は入れますか？",
+      answer: `保護者同伴でも未成年の方の飲酒は禁止です。会場内では年齢確認を行う場合がございます。`
+    },
+    {
+      qusetion: "雨の日でも開催されますか？",
+      answer: `会場は屋内ですので、天候に関わらず開催いたします。`
+    },
+    {
+      qusetion: "再入場は可能ですか？",
+      answer: `はい、可能です。混雑時は一時的に入場制限を行う場合がありますのでご了承ください。`
+    },
+    {
+      qusetion: "どのくらいの時間滞在できますか？",
+      answer: `特に制限はございませんが、混雑状況によりお声がけさせていただく場合があります。`
+    },
+    {
+      qusetion: "ビールは何種類くらいありますか？",
+      answer: `日によって異なりますが、常時8種類以上のクラフトビールをご用意しております。`
+    },
+    {
+      qusetion: "ビールの量はどれくらいですか？",
+      answer: `出店ブルワリーにより単品のサイズは異なります。<br>
+飲み比べセットは150ml×4杯でございますので、少しずついろんな味を楽しみたい方にもおすすめです。`
+    },
+    {
+      qusetion: "お子様連れでも大丈夫ですか？",
+      answer: `ベビーカーでの来場も可能ですが、混雑が予想されるため、十分にご注意ください。安全確保のため、小さなお子様の入場はなるべくご遠慮いただいております。`
+    },
+    {
+      qusetion: " 荷物を預ける場所はありますか？",
+      answer: `会場にはクローク等の荷物預かりはございません。駅構内のコインロッカー等をご利用ください。<br>
+会場内でのトラブル（貴重品の紛失・盗難など）について、主催者では一切の責任を負いかねます。予めご了承の上、お気を付けください。`
+    },
+    {
+      qusetion: "飲酒後に電車に乗っても大丈夫ですか？",
+      answer: `ホームでの飲酒は絶対におやめください。テイクアウト用の缶やビンをご用意しておりますので、ご自宅でお楽しみください。<br>
+飲みすぎには十分にご注意いただき、公共交通機関をご利用ください。<br>
+駅構内のゴミ箱はご利用いただけませんので、恐れ入りますが、ゴミは各自お持ち帰りいただきますようお願いいたします。`
+    },
+  ]
+  const qaforeigner = [
+    {
+      qusetion: "イベントでは英語は通じますか？",
+      answer: `英語表記のメニューや案内もご用意していますので、ご安心ください。`
+    },
+    {
+      qusetion: "Is English spoken at the event?",
+      answer: `We also provide English menus and signage for easy understanding.`
+    },
+    {
+      qusetion: "海外のクレジットカードは使えますか？",
+      answer: `はい、Visa、Mastercard、American Expressなどの主要なクレジットカードがご利用いただけます。一部のモバイル決済にも対応しています。`
+    },
+    {
+      qusetion: "Can I pay with foreign credit cards?",
+      answer: `Yes, we accept major credit cards including Visa, Mastercard, and American Express. Some mobile payment apps may also be available.`
+    },
+    {
+      qusetion: "観光客も参加できますか？",
+      answer: `もちろんです！日本の法令により20歳以上の方が対象です。年齢確認のため、パスポートや身分証の提示をお願いする場合があります。`
+    },
+    {
+      qusetion: "Can tourists join the event?",
+      answer: `Absolutely! Everyone over the legal drinking age (20 years old in Japan) is welcome. Please bring your passport or ID for age verification if needed.`
+    },
+    {
+      qusetion: "日本ではチップは必要ですか？",
+      answer: `日本ではチップの習慣はありません。表示価格がそのままお支払いいただく金額です。安心してイベントをお楽しみください。`
+    },
+    {
+      qusetion: "Is tipping expected in Japan?",
+      answer: `No tipping is necessary in Japan. The price listed is the final price. Just enjoy your time and the beer!`
+    }
   ]
   const menus = [
     {
@@ -1162,7 +1280,23 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
             前夜祭 Q&A
           </div>
           <div className=" max-w-[575px] m-auto gap-8">
-            <div className="text-lg text-white cursor-pointer font-semibold text-center">準備中</div>
+            {qabefore.map((beer, index) =>
+              <div key={index} className="w-full pb-3">
+                <div className="text-lg text-white cursor-pointer font-semibold" onClick={() => set_index(i => i !== index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length + stores_4.length + stores_food.length ? index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length + stores_4.length + stores_food.length : -1)}>{beer.qusetion} <PlayArrowIcon className="!w-6 !h-6 rotate-90  mb-2" /></div>
+                <div className={` text-white text-left mt-1 mb-2  overflow-hidden text-sm md:text-base ${_index === index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length + stores_4.length + stores_food.length ? "h-max" : "h-0"}`} dangerouslySetInnerHTML={{ __html: beer.answer }}></div>
+              </div>
+            )}
+          </div>
+          <div id="q&a" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
+            外国人観光客向け Q&A<br></br><span className="text-2xl">For International Visitors</span>
+          </div>
+          <div className=" max-w-[575px] m-auto gap-8">
+            {qaforeigner.map((beer, index) =>
+              <div key={index} className="w-full pb-3">
+                <div className="text-lg text-white cursor-pointer font-semibold" onClick={() => set_index(i => i !== index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length + stores_4.length + stores_food.length ? index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length + stores_4.length + stores_food.length : -1)}>{beer.qusetion} <PlayArrowIcon className="!w-6 !h-6 rotate-90  mb-2" /></div>
+                <div className={` text-white text-left mt-1 mb-2  overflow-hidden text-sm md:text-base ${_index === index + beers.length - 1 + foods.length + kitchens.length + stores.length + stores_2.length + stores_3.length + stores_4.length + stores_food.length ? "h-max" : "h-0"}`} dangerouslySetInnerHTML={{ __html: beer.answer }}></div>
+              </div>
+            )}
           </div>
           <div className="h-24"></div>
           <div className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-3xl md:text-4xl m-auto mt-24">
