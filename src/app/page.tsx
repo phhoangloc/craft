@@ -88,14 +88,13 @@ export default function Home() {
 2017年に沼津駅前ブリューパブから始まり、2023年3月には、太陽光と富士箱根水系天然水を利用した新工場「Natural Roots Studio」を三島にスタート。<br>
 2つの工場を最大限に活かし、私たちだからできるビールをお届けします。
 `
-
     },
     {
       img: "/logo/beer_06.jpg",
       name: "ワイマーケット・ブルーイング",
       add: "愛知 / 名古屋 ",
       guide_one: `ルプリンネクター <br> Hazy IPA【ABV】7.5%`,
-      guide_two: `ビーバップカップ <br> American Black IPA【ABV】7.0%`,
+      guide_two: `ビーバップホップ<br> American Black IPA【ABV】7.0%`,
       content: `
       2014年名古屋駅のほど近くで誕生したクラフトビール醸造所。「柳橋（Y）中央卸売市場（MARKET）」がその名の由来。<br>
 自分たちの『飲みたい』を追求し、これまでに500種類以上のビールを醸造してきました
@@ -120,8 +119,8 @@ export default function Home() {
       img: "/logo/beer_08.png",
       name: "ウッドミルブルワリー・京都",
       add: "京都 / 今出川 ",
-      guide_one: `はるさくホワイト <br> ベルジャンスタイルフルーツビール【ABV】5.0%`,
-      guide_two: `魔燈生エール2025 スペシャルver. <br> ヘイジーIPA【ABV】5.5%`,
+      guide_one: `はっさくホワイト<br>ベルジャンスタイルフルーツビール【ABV】5.0%`,
+      guide_two: `魔醸造エール2025 スペシャルver./ヘイジーIPA【ABV】5.5%`,
       content: `
       「京都人がつくる、京都の地ビール」<br>
 お風呂上がりにガブガブッ！プハーッ！と豪快にサワヤカに飲めるビールを揃えて皆さまのお越しをお待ちしております！
@@ -132,7 +131,7 @@ export default function Home() {
       name: "Kyoto Brewing",
       add: "京都 / 十条",
       guide_one: `一期一会 <br> セゾン【ABV】5.0%`,
-      guide_two: `異国堂々 <br> ベルジャンクアッド【ABV】10.0%`,
+      guide_two: `異風堂々<br>ベルジャンクァッド【ABV】10.0%`,
       content: `
      京都醸造は、2015年に京都市・十条で創業したクラフトビール醸造所で、2025年に10周年を迎えます。<br>
 創業当時からハウス酵母であるベルギー酵母にモダンなホップを掛け合わせたビールを造っています。
@@ -169,7 +168,8 @@ export default function Home() {
       img: "/logo/beer_12.png",
       name: "銭湯醸造 上方ビール",
       add: "大阪 / 淡路",
-      guide_one: `ヘラクリス <br> ポーター【ABV】6.0%`,
+      guide_one: `セゾンビール/セゾン【ABV） 5.0%`,
+      guide_two: `ヘラクリス <br> ポーター【ABV】6.0%`,
       content: `大阪 淡路銭湯跡地をリノベーションした日本初の銭湯ビール醸造所。<br>
 多様化する様々な食に合うビールを造り、同じ味は作らず常に新しいビールを造っています。`
     },
@@ -215,8 +215,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_16.png",
       name: "NOMCRAFT BREWING",
       add: "和歌山 / 有田川",
-      guide_one: `Craft Lager <br> Helles Lager【ABV】4.5%`,
-      guide_two: `Nomclash Weizen Dopplebock <br> Wheat-Weizenbock【ABV】8.0%`,
+      guide_one: `Nomcraft Lager <br> Helles Lager【ABV】4.5%`,
+      guide_two: `Nomclassic Weizen Dopplebock <br> Wheat-Weizenbock【ABV】8.0%`,
       content: `
       ノムクラフトブリューイング 和歌山 有田川僕らは「クラフトビールでまちづくり」という大きなプロジェクトにも挑んでいます。<br>
       保育所だった建物の一角をリノベーションし立ち上げたNomcraft Brewing。<br>
@@ -250,8 +250,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_19.png",
       name: "RISE＆WIN Brewing Co./KAMIKATZ BEER",
       add: "徳島 / 上勝町",
-      guide_one: `HAPPY NUTS HOUR <br> ベルジャンホワイト【ABV】5.0%`,
-      guide_two: `セニョールラングリー <br> セゾン【ABV】5.0%`,
+      guide_one: `モーニングサウナー/ピルスナー【ABV】 5.0%`,
+      guide_two: `HAPPY NUTS HOUR <br> ベルジャンホワイト【ABV】5.0%`,
       content: `
       美味しいビールを楽しむだけで「環境にちょっと良いコト」に繋がっている。<br>
 地球規模で巻き起こっている環境問題に対して、いち早く行動を起こしていた人口1,400人足らずの町、上勝町。
@@ -289,8 +289,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_22.jpg",
       name: "別府ブルワリー",
       add: "大分 / 別府",
-      guide_one: `ルプリンネクター <br> Hazy IPA【ABV】7.5%`,
-      guide_two: `ビーバップカップ <br> American Black IPA【ABV】7.0%`,
+      guide_one: `Kabosu Saison / Fruited Sour Saison w/ Kabosu ABV 4.0%`,
+      guide_two: `チャイミー★シャイニー/Fruited Sour Ale w/Cherry. Guava & Edible Glitters ABV 4.0%`,
       content: `
 2022年11月に初めて醸造を開始した大分県別府市で唯一のクラフトビール醸造所です。<br>
 別府観光のお土産だけにとどまらない、全国から別府へ人を呼び寄せるようなクラフトビールづくりを行っています。“湯あがり”をコンセプトに醸造したオリジナリティ溢れるクラフトビールで「旅を潤す」至福の時間をお届けします。<br>
