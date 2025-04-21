@@ -38,6 +38,8 @@ export default function Home() {
       img: "/logo/beer_01.png",
       name: "HOPDOG BREWING",
       add: "秋田 / 秋田市",
+      guide_one: `FaRM to YOU DDH IPA <br> インターナショナルIPA【ABV】6.0%`,
+      guide_two: `さくらサキホコレ <br> ハーブ・スパイスビール【ABV】4.0%`,
       content: `85年以上続いた秋田市最後の銭湯「星の湯」(2021年2月閉店)をリノベーションして、クラフトビール・ハードサイダー醸造所を設立。<br> 
       2023創業。「秋田の原料を使った製品を多くの人に届けることで、人生と食卓をもっと豊かにしたい」というミッションを掲げ、横手産ホップや秋田県内産果実の調達に日々奔走しています。`
     },
@@ -45,6 +47,8 @@ export default function Home() {
       img: "/logo/beer_02.png",
       name: "TEGAMISHA BREWERY",
       add: "東京 / 調布",
+      guide_one: ` Penny Lane <br> ペールエール【ABV】5.0%`,
+      guide_two: `Black Bird <br> ドライスタウト【ABV】5.5%`,
       content: `「関西蚤の市」やみやこメッセで開催の「紙博 in 京都」などイベント運営、カフェ・雑貨店を展開する「手紙社」が、東京都調布市にオープンしたクラフトビールのお店で2023年6月より醸造を開始しました。
       <br>皆様に美味しいと感じていただけるようなビールを目指して醸造してます。
 `
@@ -53,6 +57,8 @@ export default function Home() {
       img: "/logo/beer_03.jpg",
       name: "Nobara Homestead Brewery",
       add: "長野 / 青木村",
+      guide_one: `Utakata <br> Pale Ale【ABV】5.0%`,
+      guide_two: `MOMO <br> Sour Braggot【ABV】6.0%`,
       content: `信州青木村の山麓で、夫婦二人で2022年に創業した小さな醸造所、Nobara Homestead Breweryです。この地の気候風土と生態系が生み出す多様な素材を尊重し、食と文化、自然と暮らしが調和する世界を多くの人々と共有したいという想いのもと、麦酒づくりに取り組んでいます。
       <br>このたび、京都に初出店いたします。歴史と文化、そして自然が美しく調和したこの特別な場所で、皆様との出会いを楽しみにしています。
 `
@@ -61,6 +67,8 @@ export default function Home() {
       img: "/logo/beer_04.png",
       name: "West Coast Brewing",
       add: "静岡 / 用宗",
+      guide_one: `Starwacher <br> West Coast IPA【ABV】7.0%`,
+      guide_two: `Jam Session <br> BA Sour w/ Green(unripened) Japanese Plums【ABV】5.0%`,
       content: `
       Hop Dude一族が生息する、静岡市用宗（もちむね）漁港のクラフトビール醸造所『West Coast Brewing（WCB）』。<br>
       2019年6月に免許を取得し、同年7月に醸造をスタート。私たちが目指しているのは、クラフトビールの本場であり、オーナーの故郷でもあるアメリカのビール。<br>
@@ -71,6 +79,9 @@ export default function Home() {
     {
       img: "/logo/beer_05.png",
       name: "Repubrew",
+      guide_one: `CAMPai HAZY <br> Hazy IPA【ABV】7.5%`,
+      guide_two: `BARREL AGED WILD SAISON <br> Barrel Aged Wild Saison【ABV】6.5%`,
+
       add: "静岡 / 沼津 ",
       content: `
 「ないものを作る」をモットーに、ビールを通して「新しい発見」を届けるクラフトビールメーカー。<br>
@@ -83,6 +94,8 @@ export default function Home() {
       img: "/logo/beer_06.jpg",
       name: "ワイマーケット・ブルーイング",
       add: "愛知 / 名古屋 ",
+      guide_one: `ルプリンネクター <br> Hazy IPA【ABV】7.5%`,
+      guide_two: `ビーバップカップ <br> American Black IPA【ABV】7.0%`,
       content: `
       2014年名古屋駅のほど近くで誕生したクラフトビール醸造所。「柳橋（Y）中央卸売市場（MARKET）」がその名の由来。<br>
 自分たちの『飲みたい』を追求し、これまでに500種類以上のビールを醸造してきました
@@ -95,6 +108,8 @@ export default function Home() {
       img: "/logo/beer_07.jpg",
       name: "アルデアやましろビールズ",
       add: "京都 / 京田辺",
+      guide_one: `やましろレモンゴーゼ <br> ゴーゼ【ABV】5.0%`,
+      guide_two: `やましろ京番茶ポーター <br> ポーター【ABV】5.0%`,
       content: `
       自然豊かな京都府南部・山城地域でスタートし、魅力的な地産を活かしたクラフトビールです！ <br>
       カリフォルニアで暮らしながら経験した、個性的で自由な、地産を活かしたクラフトビール造りを始めています。 <br>
@@ -105,6 +120,8 @@ export default function Home() {
       img: "/logo/beer_08.png",
       name: "ウッドミルブルワリー・京都",
       add: "京都 / 今出川 ",
+      guide_one: `はるさくホワイト <br> ベルジャンスタイルフルーツビール【ABV】5.0%`,
+      guide_two: `魔燈生エール2025 スペシャルver. <br> ヘイジーIPA【ABV】5.5%`,
       content: `
       「京都人がつくる、京都の地ビール」<br>
 お風呂上がりにガブガブッ！プハーッ！と豪快にサワヤカに飲めるビールを揃えて皆さまのお越しをお待ちしております！
@@ -114,6 +131,8 @@ export default function Home() {
       img: "/logo/beer_09.png",
       name: "Kyoto Brewing",
       add: "京都 / 十条",
+      guide_one: `一期一会 <br> セゾン【ABV】5.0%`,
+      guide_two: `異国堂々 <br> ベルジャンクアッド【ABV】10.0%`,
       content: `
      京都醸造は、2015年に京都市・十条で創業したクラフトビール醸造所で、2025年に10周年を迎えます。<br>
 創業当時からハウス酵母であるベルギー酵母にモダンなホップを掛け合わせたビールを造っています。
@@ -126,6 +145,8 @@ export default function Home() {
       img: "/logo/beer_10.jpg",
       name: "KYOTO NUDE BREWERY",
       add: "京都 / 京北",
+      guide_one: `HOKAZE -帆風- <br> Session IPA【ABV】4.5%`,
+      guide_two: ` ZUIUN -瑞雲- <br> Fruit Ale w/Strawberry & Spices【ABV】5.0%`,
       content: `
 私たちは京都市内でクラフトビールの飲食店を運営しております。<br>
 そこから自家醸造をしたい、世界に向けて挑戦したい、という思いより、京都にてBREWERYをつくることを決意。<br>
@@ -136,6 +157,8 @@ export default function Home() {
       img: "/logo/beer_11.jpg",
       name: "家守堂",
       add: "京都 / 伏見",
+      guide_one: `茶かぶき <br> Japanese Saison【ABV】5.5%`,
+      guide_two: `午後のスタウト <br> Oatmeal Coffee Stout【ABV】5.5%`,
       content: `
 地元に愛され続けた日本茶専門店「安本茶舗」を継承し、築150年の町家をリノベーション。<br>
 明るく開放的なブリューパブが生まれた。技術に裏打ちされた高い品質を維持しながら、インパクトと飲みやすさを兼ね備えたビールを造っている。<br>
@@ -146,15 +169,16 @@ export default function Home() {
       img: "/logo/beer_12.png",
       name: "銭湯醸造 上方ビール",
       add: "大阪 / 淡路",
+      guide_one: `ヘラクリス <br> ポーター【ABV】6.0%`,
       content: `大阪 淡路銭湯跡地をリノベーションした日本初の銭湯ビール醸造所。<br>
-多様化する様々な食に合うビールを造り、同じ味は作らず常に新しいビールを造っています。
-`
-
+多様化する様々な食に合うビールを造り、同じ味は作らず常に新しいビールを造っています。`
     },
     {
       img: "/logo/beer_13.png",
       name: "Derailleur Brew Works",
       add: "大阪 / 西成",
+      guide_one: `西成ライオットエール <br> American Pale Ale【ABV】5.0%`,
+      guide_two: ` RiVER RUNs THRU iT <br> Smoked Imperial Stout【ABV】12.5%`,
       content: `
 Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自分で選ぶ者」を意味するディレイラを冠し、常識や一本道に囚われない発想やマインドで、ビールを作り続けていくことを信念としています。<br>
 昨年に引き続きヘッドブルワー沖吉が美味しいビールをご用意して、みなさんのご来店をお待ちしています!!
@@ -165,6 +189,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_14.jpg",
       name: "箕面ビール",
       add: "大阪 / 箕面",
+      guide_one: `STOUT <br> スタウト【ABV】5.5%`,
+      guide_two: `インペリアルスタウト <br> インペリアルスタウト【ABV】8.0%`,
       content: `
 1997年から箕面の地で製造をスタートしたローカルブルワリーです。<br>
 クラシックなスタイルをスタンダードとし、また地元の名産である柚子や近隣の果物を使ったビールや、自然酵母や酒米麹を使ったビールなど季節にあわせて様々なスタイルを醸造。<br>
@@ -177,6 +203,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_15.png",
       name: "イーグレブルワリー",
       add: "兵庫 / 姫路",
+      guide_one: `マジックアワー <br> フルーツエール【ABV】4.5%`,
+      guide_two: `カベルネキッス <br> ワインビール【ABV】10.0%`,
       content: `
       兵庫県から来ましたイーグレブルワリーです！<br>
       姫路城のお膝元、姫路市初のクラフトビール醸造所です。お風呂上がりにグビグビ飲める美味しいビールをたっぷりお持ちしました。<br>
@@ -187,19 +215,20 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_16.png",
       name: "NOMCRAFT BREWING",
       add: "和歌山 / 有田川",
+      guide_one: `Craft Lager <br> Helles Lager【ABV】4.5%`,
+      guide_two: `Nomclash Weizen Dopplebock <br> Wheat-Weizenbock【ABV】8.0%`,
       content: `
       ノムクラフトブリューイング 和歌山 有田川僕らは「クラフトビールでまちづくり」という大きなプロジェクトにも挑んでいます。<br>
       保育所だった建物の一角をリノベーションし立ち上げたNomcraft Brewing。<br>
       メンバーそれぞれが惚れ込んだ有田川町。<br>
-      この小さな町とクラフトビールシティ・ポートランドとの連携によるまちづくり。ビールと合わせて僕らの「クラフトビールでまちづくり」が目指すところをお伝えできればうれしいです！
-
-`
-
+      この小さな町とクラフトビールシティ・ポートランドとの連携によるまちづくり。ビールと合わせて僕らの「クラフトビールでまちづくり」が目指すところをお伝えできればうれしいです！`
     },
     {
       img: "/logo/beer_17.png",
       name: "CHORYO Craft Beer",
       add: "奈良 / 広陵町",
+      guide_one: `ライスラガー <br> Lager【ABV】5.0%`,
+      guide_two: `LATTE STOUT <br> Coffee Stout【ABV】7.5%`,
       content: `
        奈良 広陵町奈良県で日本酒・クラフトビールを醸造しており、毎月様々な新商品を発売しています。<br>
 定番のライスラガーをはじめ、バラエティ豊かな商品をお持ちします！<br>
@@ -210,6 +239,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_18.png",
       name: "奈良醸造",
       add: "奈良 / 大和郡山",
+      guide_one: `BEER AFTER SAUNA <br> FRUIT GOSE【ABV】4.0%`,
+      guide_two: `UNDERWATER <br> SAKE YEAST BEER【ABV】11.0%`,
       content: `
       2018年6月から奈良市にて醸造を開始した、「ビールを選ぶ楽しみを！」がモットーの奈良醸造です。
       <br>クラシカルなビアスタイルから、地元奈良の酒蔵をはじめとした様々なメーカーとのコラボレーションなど、多種多様なビール造りを行っています。
@@ -219,6 +250,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_19.png",
       name: "RISE＆WIN Brewing Co./KAMIKATZ BEER",
       add: "徳島 / 上勝町",
+      guide_one: `HAPPY NUTS HOUR <br> ベルジャンホワイト【ABV】5.0%`,
+      guide_two: `セニョールラングリー <br> セゾン【ABV】5.0%`,
       content: `
       美味しいビールを楽しむだけで「環境にちょっと良いコト」に繋がっている。<br>
 地球規模で巻き起こっている環境問題に対して、いち早く行動を起こしていた人口1,400人足らずの町、上勝町。
@@ -230,6 +263,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_20.webp",
       name: "DD4D BREWING",
       add: "愛媛 / 松山",
+      guide_one: `Don Jalapeno <br> Chili IPA【ABV】6.0%`,
+      guide_two: `DD4D 90 Shilling <br> Wee Heavy【ABV】7.0%`,
       content: `
 1998年にセレクトショップとして愛媛県松山市に誕生したDD4D、
 「常識に捉われず、自分の信じる道を行く」という代表の想いをもとに、2019年よりクラフトビールの製造をスタートし、
@@ -240,6 +275,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_21.png",
       name: "しまなみブルワリー",
       add: "広島 / 尾道",
+      guide_one: ` ストライクピルスナー <br> ピルスナー【ABV】5.5%`,
+      guide_two: `しまなみキャット グレープアイスクリーム <br> ハードアイスクリームセルツァー？【ABV】4.0%`,
       content: `
 広島から参戦の「しまなみブルワリー」です！<br>
 ハートランド、一番搾りの生みの親である山田一己のもとで長年修行した後、クラフトラガーを追求すべく地元の広島でしまなみブルワリーを立ち上げました。<br>
@@ -252,6 +289,8 @@ Derailleur Brew Worksはフランス語で「道を外す者＝生き方を自�
       img: "/logo/beer_22.jpg",
       name: "別府ブルワリー",
       add: "大分 / 別府",
+      guide_one: `ルプリンネクター <br> Hazy IPA【ABV】7.5%`,
+      guide_two: `ビーバップカップ <br> American Black IPA【ABV】7.0%`,
       content: `
 2022年11月に初めて醸造を開始した大分県別府市で唯一のクラフトビール醸造所です。<br>
 別府観光のお土産だけにとどまらない、全国から別府へ人を呼び寄せるようなクラフトビールづくりを行っています。“湯あがり”をコンセプトに醸造したオリジナリティ溢れるクラフトビールで「旅を潤す」至福の時間をお届けします。<br>
@@ -519,6 +558,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
       img: "/logo/beer_17.png",
       name: "CHORYO Craft Beer",
       add: "奈良 / 広陵町",
+
       content: `
       奈良 広陵町奈良県で日本酒・クラフトビールを醸造しており、毎月様々な新商品を発売しています。<br>
 定番のライスラガーをはじめ、バラエティ豊かな商品をお持ちします！<br>
@@ -996,7 +1036,7 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
           <div id="beer" className="h-12 max-w-[768px] m-1/2 text-white rounded-md flex flex-col justify-center text-center my-12  font-bold text-4xl md:text-5xl m-auto mt-24" style={{ fontFamily: 'Dela Gothic One' }}>
             BREWERY
           </div>
-          <div className="grid grid-cols-2 max-w-[768px] m-auto gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 max-w-[768px] m-auto gap-8">
             {beers.map((beer, index) =>
               <div key={index} className="w-full ">
                 <div className={`aspect-square w-full relative rounded-lg overflow-hidden bg-white`} >
@@ -1005,6 +1045,8 @@ AQベボリューションは創業13年目を迎える海外クラフトビー�
                 <div className="h-6"></div>
                 <div className="font-bold text-lg text-white text-center cursor-pointer hover:opacity-75 " onClick={() => set_index(i => i !== index ? index : -1)}>{beer.name} <PlayArrowIcon className="!w-6 !h-6 rotate-90 mb-2" /></div>
                 <div className=" text-white text-center opacity-75">{beer.add}</div>
+                {beer.guide_one ? <div className=" text-white text-sm md:text-base text-left px-2 my-2" dangerouslySetInnerHTML={{ __html: `<p class="font-bold">定番ビール：  <span class="font-normal">${beer.guide_one}</span></p>` }}></div> : null}
+                {beer.guide_two ? <div className=" text-white text-sm md:text-base text-left px-2 my-2" dangerouslySetInnerHTML={{ __html: `<p class="font-bold">DARKビール：  <span class="font-normal">${beer.guide_two}</span></p>` }}></div> : null}
                 <div className={` text-white text-left px-2 my-2  overflow-hidden text-sm md:text-base leading-6 ${_index === index ? "h-max" : "h-0"}`} dangerouslySetInnerHTML={{ __html: beer.content }}></div>
               </div>
             )}
